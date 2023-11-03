@@ -7,6 +7,8 @@ from blog.models import (
 )
 from .forms import AddBlogForm, EditBlogForm, BlogDetailForm
 # Create your views here.
+
+# Home Page
 class HomeView(View):
 
     def get(self, request):
@@ -16,7 +18,7 @@ class HomeView(View):
         }        
         return render(request, "index.html", context)
     
-
+# My Blogs
 class MyBlogsView(View):
 
     def get(self, request):
@@ -28,7 +30,7 @@ class MyBlogsView(View):
         }        
         return render(request, "blog/myblogs.html", context)
     
-
+# Delete Blogs
 def delete_blog(request, id):
     blog = Blog.objects.get(id=id)
     blog.delete()
@@ -36,7 +38,7 @@ def delete_blog(request, id):
 
 
 
-
+# Add Blog
 class AddBlog(View):
     def post(self, request):
         user = request.user
@@ -52,7 +54,7 @@ class AddBlog(View):
         form = AddBlogForm()
         return render(request, "blog/addblog.html", {"form": form})
     
-
+# Edit Blog
 class EditBlog(View):
     def post(self, request, id):
         user = request.user
@@ -70,7 +72,7 @@ class EditBlog(View):
         form = EditBlogForm(instance=blog)
         return render(request, "blog/editblog.html", {"form": form})
     
-
+# Blog Detail
 class BlogDetail(View):
     def post(self, request, id):
         user = request.user
