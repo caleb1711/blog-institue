@@ -3,13 +3,13 @@ from django.contrib.auth import  get_user_model
 from .models import Blog, Comment
 User = get_user_model()
 
-
+# Blog Form
 class AddBlogForm(forms.ModelForm):
     class Meta:
         model = Blog
         fields = ['image','title', 'content']
 
-
+# Comment Form 
 class EditBlogForm(forms.ModelForm):
     class Meta:
         model = Blog
