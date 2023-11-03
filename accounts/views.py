@@ -6,7 +6,7 @@ from django.contrib import messages
 from accounts.models import User
 from accounts.forms import LoginForm, SignUpForm, ForgotForm, ResetForm
 
-
+# Sign Up 
 class SignUpView(View):
     def post(self, request):
         form = SignUpForm(request, request.POST)
@@ -20,7 +20,7 @@ class SignUpView(View):
         form = SignUpForm(request)
         return render(request, "accounts/signup.html", {"form": form})
 
-
+# Login
 class LoginView(View):
     def post(self, request):
         form = LoginForm(request, request.POST)
@@ -35,7 +35,7 @@ class LoginView(View):
         form = LoginForm(request)
         return render(request, "accounts/signin.html", {"form": form})
 
-
+# Forgot
 class ForgotView(View):
     def post(self, request):
         form = ForgotForm(request, request.POST)
@@ -48,7 +48,7 @@ class ForgotView(View):
         form = ForgotForm(request)
         return render(request, "accounts/forgot_password.html", {"form": form})
 
-
+# Reset
 class ResetPasswordView(View):
     def post(self, request, token):
         form = ResetForm(request, request.POST)
@@ -63,6 +63,7 @@ class ResetPasswordView(View):
         form = ResetForm(request, initial={'token': token})
         return render(request, "accounts/reset_password.html", {"form": form, "token":token})
 
+# Logout
 def user_logout(request):
     logout(request)
     messages.success(request, "Logged Out successfully.")
