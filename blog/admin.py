@@ -5,14 +5,14 @@ from .models import (
 )
 # Register your models here.
 
-
+# Blogs
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
     list_display = ("user", "image", "title", "content", "created_at", "updated_at")
     list_filter = ("user",)  
     search_fields = ("title",)
 
-
+# Comment
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ("user", "blog","content", "created_at", "updated_at")
