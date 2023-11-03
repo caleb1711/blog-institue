@@ -1,6 +1,8 @@
 # Blogs Institute
 
-This is a web application that allows users to create, edit, delete, and view blog posts. Users can also leave comments on blog posts.
+This is a home page of blog institute.
+
+![Home](https://github.com/caleb1711/blog-institue/tree/main/static/images/home.png)
 
 ## Features
 
