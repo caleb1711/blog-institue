@@ -1,4 +1,7 @@
 # Blogs Institute
+Blogs Institute is a full-featured blogging platform that empowers users to share their thoughts, ideas, and stories with the world. Whether you're an aspiring writer or a seasoned blogger, our platform provides the tools and features you need to create, manage, and engage with your blog content.
+
+
 - __Home Page__
 
   - User can see all of the blogs in home page after clicking on read more button user will go to the blog detail page .
@@ -46,7 +49,45 @@
 
 - __LOGOUT__
    - User can logout to the system.
-  
+
+- __HEADER__
+   - The header of our blogging platform, Blogs Institute, provides users with easy navigation and essential information.
+   - Logo: Our distinctive logo is prominently displayed, representing the Blogs Institute brand. Click on it to return to the homepage from anywhere on the site.
+   - Navigation Menu: The navigation menu is organized for easy access to different sections of the platform. It includes links to the homepage, user profile, blog management, and the login/logout option. For mobile users, the menu is collapsible for a smooth browsing experience.
+   - User Account: Once you've signed in, your profile picture or avatar is displayed in the header, along with options for account settings and log out.
+
+- __FOOTER__
+   - Copyright Information: We respect intellectual property rights. The footer contains copyright information to protect user-generated content and ensure proper attribution.
+ 
+- __FONT SIZE__
+   - Robot font is used in our website.
+ 
+   - @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap");
+   - @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+   - @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+- __VALIDATOR TESTING__
+   - VALIDATOR TESTING with wc3 of all the front end .
+   - Python testing done is manually
+   - Django testing done manually
+   - All the features of our Project is Done 
+
+
+- __UNFIX BUGS__
+   - At Blogs Institute, we are committed to providing a seamless and bug-free experience for our users. We take quality assurance seriously and have conducted thorough manual testing of our website. We are pleased to report that, as of the latest testing, no bugs have been identified.
+   - Our testing process involves:
+   - Navigating the website on different browsers, including Chrome, Firefox, and Safari, to ensure cross-browser compatibility.
+   - Testing the website's functionality on both desktop and mobile devices to ensure responsive design.
+   - Exploring all user features, including registration, login, blog creation, editing, commenting, and account management.
+
+
+- __DEPLOYMENT__
+   - This site will deploye on heroku as soon.
+
+- __CREDITS__
+   - Bootsrap , Roboto Fonts 
+ 
+
   ### Media
 
 - The photos used on the website is our owned images .
@@ -70,7 +111,7 @@
 
   
   
-## All Features
+## Key Features
 
 - Full Authentication System
 - User can create his account, login, forgot password and reset password. 
