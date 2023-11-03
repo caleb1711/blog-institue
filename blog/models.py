@@ -2,7 +2,7 @@ from django.db import models
 from accounts.models import User
 # Create your models here.
 
-
+# Blog Model
 class Blog(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blogs", help_text=("Add the owner of blog"))
     image = models.ImageField(upload_to="blog_images/", help_text=("Add Blog image"))
@@ -22,7 +22,7 @@ class Blog(models.Model):
     def __str__(self) :
         return f"{self.title}" or f"Blog-{self.id}"
     
-
+# Comment Model
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commentblogs", help_text=("Add the blog"))
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name="comments", help_text=("Add the comment"))
