@@ -1,0 +1,129 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog Institute</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="icon" type="image/x-icon" href="https://lms-juniper-staticfiles-codeinstitute.s3.eu-west-1.amazonaws.com/static/ci-theme/images/favicon.70793afcf85e.ico">
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="main_header dashboard_header">
+        <div class="container main_header_container">
+          <div class="main_header_text">
+            <a href="{% url 'home' %}" style="text-decoration: none">
+              <h4>Bl<span style="color: #ea2d00">o</span>g</h4>
+              <p>Institute</p>
+            </a>
+          </div>
+
+          
+          <div
+            class="dropdown"
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+          {% if request.user.is_authenticated %}
+             <button
+              class="dropdown-toggle header_dropdown_top"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            > 
+               <div class="user_name_and_iamge">
+                <img src="{% static 'images/download.jpeg' %}" alt="" />
+                <h6 class="user_name_top">{{request.user.first_name}}</h6>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown_menu_item">
+              <li>
+                <a class="dropdown-item item_1" href="{% url 'myblogs' %}"
+                  >My Blogs</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item item_1" href="{% url 'addblog' %}"
+                  >Add Blog</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item item_1" href="{% url 'logout' %}"
+                  >Log Out</a
+                >
+              </li>
+            </ul> 
+            {% else %}
+            <a href="{% url 'login' %}" class="item_1" style="text-decoration:none;" > Login </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="container blog_container">
+        {% if messages %}
+        
+                  {% for message in messages %}
+                  
+                  <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                  {% endfor %} 
+             
+          {% endif %}
+          
+        <h1 class="m-5 text-center">ALL BLOGS</h1>
+        <hr />
+        <div class="row">
+          {% if blogs %}  
+          {% for blog in blogs %}
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="blog_card">
+              <div class="blog_card_image">
+                <img src="{{blog.image.url}}" height="185px" alt="" />
+              </div>
+              <div class="blog_card_content">
+                <h3>{{blog.title}}</h3>
+                <p>{{blog.content|slice:":50"}}
+                </p>
+                <a
+                  href="{% url 'blog_detail' blog.id %}"
+                  ><h6>Read More</h6></a
+                >
+              </div>
+              <div class="blog_date">
+                <p>{{blog.created_at}}</p>
+                <p> {{blog.comments.all.count}} Comments</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %} 
+          {% else %}
+          <div class="col-lg-4 col-md-6 col-sm-12">          
+            <h3>No Blog available at this time.</h3>
+          </div>
+          {% endif %}
+         
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+          <p>&copy; 2023 Blog Institute. All rights reserved.</p>
+      </div>
+  </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
