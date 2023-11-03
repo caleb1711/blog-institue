@@ -2,7 +2,7 @@
 
 This is a home page of blog institute.
 
-![CI logo](https://github.com/caleb1711/blog-institue/tree/main/static/images/home.png)
+![HOME](github.com/caleb1711/blog-institue/tree/main/static/images/home.png)
 
 ## Features
 
