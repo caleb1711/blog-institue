@@ -14,7 +14,7 @@ This is a web application that allows users to create, edit, delete, and view bl
 - Upload and display images in blog posts and comments.
 
 ## Getting Started
-    Make sure python and django are installed in your system. 
+Make sure python and django are installed in your system. 
 
 ## Installation
 
@@ -22,14 +22,14 @@ This is a web application that allows users to create, edit, delete, and view bl
    - List any prerequisites or dependencies here.
 
 2. Clone the repository:
-   - https://github.com/your-username/your-project.git
+   - https://github.com/caleb1711/blog-institue
 
 ### Setup virtual environment
 Create a virtual environment using python3
-    ```bash
+```bash
     python3 -m venv venv
     cd book-writer
-    ```
+```
 Activate the virtual environment
 ```bash
 source venv/bin/activate
