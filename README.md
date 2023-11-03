@@ -19,7 +19,11 @@ Make sure python and django are installed in your system.
 ## Installation
 
 1. Prerequisites:
-   - List any prerequisites or dependencies here.
+   - asgiref==3.7.2
+   - Django==4.2.7
+   - Pillow==10.1.0
+   - sqlparse==0.4.4
+   - typing_extensions==4.8.0
 
 2. Clone the repository:
    - https://github.com/caleb1711/blog-institue
