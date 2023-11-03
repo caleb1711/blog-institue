@@ -2,7 +2,7 @@
 
 This is a home page of blog institute.
 
-![Home](https://github.com/caleb1711/blog-institue/tree/main/static/images/home.png)
+<img width="960" alt="login 2" src="https://github.com/caleb1711/blog-institue/tree/main/static/images/home.png">
 
 ## Features
 
