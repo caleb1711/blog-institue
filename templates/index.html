@@ -60,7 +60,7 @@
               </li>
             </ul> 
             {% else %}
-            <a href="{% url 'login' %}" class="item_1" style="text-decoration:none;" > Login </a>
+            <a href="{% url 'login' %}" class="item_1" style="text-decoration:none;" id="login" > Login </a>
             {% endif %}
           </div>
         </div>
@@ -94,7 +94,7 @@
                 </p>
                 <a
                   href="{% url 'blog_detail' blog.id %}"
-                  ><h6>Read More</h6></a
+                  id ="read" ><h6>Read More</h6></a
                 >
               </div>
               <div class="blog_date">
@@ -125,5 +125,49 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const button = document.getElementById("login");
+      button.style.padding = "10px 20px"; 
+      button.style.borderRadius = "8px"; 
+      button.style.backgroundColor = "black"; 
+      button.style.color = "white"; 
+
+        button.addEventListener("mouseenter", function() {
+            button.style.backgroundColor = "black"; 
+            button.style.color = "white"; 
+            button.style.padding = "10px 20px"; 
+            button.style.borderRadius = "8px"; 
+        });
+
+        button.addEventListener("mouseleave", function() {
+          button.style.backgroundColor = "#454545"; 
+          button.style.color = "white"; 
+          button.style.padding = "10px 20px"; 
+          button.style.borderRadius = "8px"; 
+      });
+
+      const readbutton = document.getElementById("readmore");
+
+      readbutton.style.padding = "10px 20px"; 
+      readbutton.style.borderRadius = "8px"; 
+      readbutton.style.backgroundColor = "black"; 
+      readbutton.style.color = "white"; 
+
+      readbutton.addEventListener("mouseenter", function() {
+        readbutton.style.backgroundColor = "black"; 
+        readbutton.style.color = "white"; 
+        readbutton.style.padding = "10px 20px"; 
+        readbutton.style.borderRadius = "8px"; 
+        });
+
+        readbutton.addEventListener("mouseleave", function() {
+          readbutton.style.backgroundColor = "#454545"; 
+          readbutton.style.color = "white"; 
+          readbutton.style.padding = "10px 20px"; 
+          readbutton.style.borderRadius = "8px"; 
+      });
+
+    </script>
   </body>
 </html>
