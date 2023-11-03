@@ -5,7 +5,7 @@ from .models import(
 from django.contrib.auth.admin  import UserAdmin
 
 # from django.contrib.auth.models import User
-
+# User Admin
 class CustomUserAdmin(UserAdmin):
     model = User
     list_display = ("email", "first_name", "last_name",  "is_staff", "is_active")
