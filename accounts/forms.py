@@ -5,7 +5,7 @@ import uuid
 from .emails import send_email
 User = get_user_model()
 
-
+# Base Form
 class BaseForm(forms.Form):
     def __init__(self, request, *args, **kwargs):
         self.request = request
@@ -13,7 +13,7 @@ class BaseForm(forms.Form):
         for field in self.fields.values():
             field.widget.attrs['class'] = 'form-control'
 
-
+# Login Form
 class LoginForm(BaseForm):
     email = forms.EmailField(max_length=100)
     password = forms.CharField(max_length=100, widget=forms.PasswordInput)
@@ -28,7 +28,7 @@ class LoginForm(BaseForm):
         cleaned_data['user'] = user
         return cleaned_data
 
-
+# Sign Up Form
 class SignUpForm(BaseForm):
     email = forms.EmailField()
     first_name = forms.CharField()
@@ -67,7 +67,7 @@ class SignUpForm(BaseForm):
         login(self.request, user)
         return user
     
-
+# Forgot Form
 class ForgotForm(BaseForm):
     email = forms.EmailField()
     
@@ -89,7 +89,7 @@ class ForgotForm(BaseForm):
         return email
     
 
-
+# Reset Form
 class ResetForm(BaseForm):
     password = forms.CharField(max_length=100, widget=forms.PasswordInput)
     password2 = forms.CharField(max_length=100, widget=forms.PasswordInput)
