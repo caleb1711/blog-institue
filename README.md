@@ -84,6 +84,26 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
 
 - __FOOTER__
    - Copyright Information: We respect intellectual property rights. The footer contains copyright information to protect user-generated content and ensure proper attribution.
+
+ - __RESPNSIVENESS__
+   - Mobile View
+   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/31dd0fc1-0de6-44f9-9273-f5ae8e6a9f5a)
+
+   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/c3626256-77d9-412a-a8e4-003a7a9fd10d)
+
+   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/1fd6c35a-f293-4fb2-bccd-4783d3355900)
+
+   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/e41c7f08-c58a-40e3-b993-e145099c22f7)
+
+   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/a28fc443-739e-428f-98b4-758280579046)
+
+   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/5b69f9f0-cb82-43a6-ab62-37b2d3ec4283)
+
+   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/7b8fde72-fa6b-4d28-b2ea-9cf8368431aa)
+
+   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/20f833dc-2186-403e-b427-3990bfc04254)
+
+
  
 - __FONT SIZE__
    - Robot font is used in our website.
