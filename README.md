@@ -8,6 +8,7 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
   - User can leave a comment on blog in blog details page so comment will be saved in database. 
 
 ![image](https://github.com/caleb1711/blog-institue/assets/130179631/37fe3494-391a-461d-9122-1f8d352570b5)
+![image](https://github.com/caleb1711/blog-institue/assets/130179631/e580b664-c84b-4533-8aa2-60f374699f21)
 
 
 - __Signup Page__
@@ -15,38 +16,62 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
   - User Can register on our website and then create the blogs and all CRUD will be perform .
   - User will enter first name , last name,  email, phone_number and password for registration.
   - user can not use same email for other account creation.
+ 
+    ![image](https://github.com/caleb1711/blog-institue/assets/130179631/ae53c977-f496-4382-97d6-3220314b6b06)
+
     
 - __Login Page__
    - After registration user will be able to login to the system .
    - User will be able to acces all the features in our site .
+ 
+     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/7fdbb711-6a25-43c0-868b-17348cfe61f8)
+
 
 
 - __Forgot Password__
    - User if user forgot his password so he will be able to reset the password.
    - User enter his email and system generate a link for reset password and send a email to user .
    - System will send the email to user
+ 
+     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/c0db5ee0-e2b9-454d-a9db-843163f35fe3)
 
-- __Forgot Password__
+
+- __Reset Password__
    - User click on reset link and he will go to the reset password page.
    - User can easily change his password and easily recover the passowrd.
+ 
+     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/94e8c579-3574-4551-a420-8f4c4815fab6)
+
 
 
 - __My Blogs Page__
    - After login user can access the my blogs page .
    - user can see all of his blogs.
    - User can edit a blog and also delete the blog.
+ 
+     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/752528ab-9dd5-4060-b304-78abee2693e8)
+
 
 - __Edit Blog Page__
    - User can edit his blog easily user will click on edit button and he will go to the edit page .
    - edit page will show prefilled data about blog.
+ 
+     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/13d01427-ea18-4f25-968a-eb8b35d88847)
+
 
 
 - __Add Blog Page__
    - User can add the blog  easily .
+ 
+     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/4676c454-5853-49fb-9178-735ab0a4bf1c)
+
      
 - __Admin Side__
    - Admin User will be able to do anything on site. 
    - Admin user can create the other admin users.
+ 
+     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/31031e80-2306-42ce-a6b0-0d97c182e358)
+
 
 - __LOGOUT__
    - User can logout to the system.
