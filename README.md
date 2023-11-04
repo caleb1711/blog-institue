@@ -119,6 +119,7 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
   ### Media
 
 - The photos used on the website is our owned images .
+- All images is coming from the backend
 
   ### Code Structure
 
