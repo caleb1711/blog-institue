@@ -70,7 +70,9 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
    - VALIDATOR TESTING with wc3 of all the front end .
    - Python testing done is manually
    - Django testing done manually
-   - All the features of our Project is Done 
+   - All the features of our Project is Done
+    ![image](https://github.com/caleb1711/blog-institue/assets/130179631/728dc8df-6bef-4f2f-9adb-75d6d65bb21f)
+
 
 
 - __UNFIX BUGS__
