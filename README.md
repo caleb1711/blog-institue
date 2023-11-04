@@ -7,7 +7,8 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
   - User can see all of the blogs in home page after clicking on read more button user will go to the blog detail page .
   - User can leave a comment on blog in blog details page so comment will be saved in database. 
 
-![HOME](https://github.com/caleb1711/blog-institue/tree/main/static/images/home.png)
+![image](https://github.com/caleb1711/blog-institue/assets/130179631/37fe3494-391a-461d-9122-1f8d352570b5)
+
 
 - __Signup Page__
 
