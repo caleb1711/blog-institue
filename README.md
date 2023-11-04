@@ -6,7 +6,7 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
 
   - User can see all of the blogs in home page after clicking on read more button user will go to the blog detail page .
   - User can leave a comment on blog in blog details page so comment will be saved in database. 
-![image](https://github.com/caleb1711/blog-institue/assets/130179631/0c48f9e4-b0a1-434e-a592-1f4c74b6f442)
+
 
 ![image](https://github.com/caleb1711/blog-institue/assets/130179631/37fe3494-391a-461d-9122-1f8d352570b5)
 ![image](https://github.com/caleb1711/blog-institue/assets/130179631/e580b664-c84b-4533-8aa2-60f374699f21)
@@ -87,6 +87,7 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
    - Copyright Information: We respect intellectual property rights. The footer contains copyright information to protect user-generated content and ensure proper attribution.
 
  - __RESPNSIVENESS__
+   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/0c48f9e4-b0a1-434e-a592-1f4c74b6f442)
    - Mobile View
    ![image](https://github.com/caleb1711/blog-institue/assets/130179631/31dd0fc1-0de6-44f9-9273-f5ae8e6a9f5a)
 
