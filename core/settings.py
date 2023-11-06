@@ -118,7 +118,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 # FOR LIVE SERVER 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # media 
