@@ -8,7 +8,7 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
   - User can leave a comment on blog in blog details page so comment will be saved in database. 
 
 
-![image](https://github.com/caleb1711/blog-institue/assets/130179631/37fe3494-391a-461d-9122-1f8d352570b5)
+![1](https://github.com/caleb1711/blog-institue/assets/130179631/4ba8171d-2886-4b93-9c23-892850f169dd)
 ![image](https://github.com/caleb1711/blog-institue/assets/130179631/e580b664-c84b-4533-8aa2-60f374699f21)
 
 
