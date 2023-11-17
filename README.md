@@ -9,7 +9,8 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
 
 
 ![1](https://github.com/caleb1711/blog-institue/assets/130179631/4ba8171d-2886-4b93-9c23-892850f169dd)
-![image](https://github.com/caleb1711/blog-institue/assets/130179631/e580b664-c84b-4533-8aa2-60f374699f21)
+![2](https://github.com/caleb1711/blog-institue/assets/130179631/5a01b7d1-1a5c-4176-a8d5-071eae601b30)
+
 
 
 - __Signup Page__
@@ -18,14 +19,16 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
   - User will enter first name , last name,  email, phone_number and password for registration.
   - user can not use same email for other account creation.
  
-    ![image](https://github.com/caleb1711/blog-institue/assets/130179631/ae53c977-f496-4382-97d6-3220314b6b06)
+    ![3](https://github.com/caleb1711/blog-institue/assets/130179631/283c3cef-035a-4a1f-b754-2d868547029c)
+
 
     
 - __Login Page__
    - After registration user will be able to login to the system .
    - User will be able to acces all the features in our site .
  
-     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/7fdbb711-6a25-43c0-868b-17348cfe61f8)
+     ![4](https://github.com/caleb1711/blog-institue/assets/130179631/28e7ce4d-7391-4830-8b3b-8f5f8a9485c5)
+
 
 
 
@@ -34,14 +37,16 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
    - User enter his email and system generate a link for reset password and send a email to user .
    - System will send the email to user
  
-     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/c0db5ee0-e2b9-454d-a9db-843163f35fe3)
+     ![5](https://github.com/caleb1711/blog-institue/assets/130179631/3dc65236-26c0-49bc-827b-c21895d4de88)
+
 
 
 - __Reset Password__
    - User click on reset link and he will go to the reset password page.
    - User can easily change his password and easily recover the passowrd.
  
-     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/94e8c579-3574-4551-a420-8f4c4815fab6)
+     ![6](https://github.com/caleb1711/blog-institue/assets/130179631/a0debbd0-b24f-4264-8c4b-0ca4e8a9acb8)
+
 
 
 
@@ -50,28 +55,32 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
    - user can see all of his blogs.
    - User can edit a blog and also delete the blog.
  
-     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/752528ab-9dd5-4060-b304-78abee2693e8)
+     ![7](https://github.com/caleb1711/blog-institue/assets/130179631/d3dd2699-f990-4139-a3e6-b852dcf927d2)
+
 
 
 - __Edit Blog Page__
    - User can edit his blog easily user will click on edit button and he will go to the edit page .
    - edit page will show prefilled data about blog.
  
-     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/13d01427-ea18-4f25-968a-eb8b35d88847)
+     ![8](https://github.com/caleb1711/blog-institue/assets/130179631/23dd4a2c-de50-4b04-b65d-afb52291e2e3)
+
 
 
 
 - __Add Blog Page__
    - User can add the blog  easily .
  
-     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/4676c454-5853-49fb-9178-735ab0a4bf1c)
+     ![9](https://github.com/caleb1711/blog-institue/assets/130179631/cad14b0c-275e-49d6-8cca-c23fbe53f193)
+
 
      
 - __Admin Side__
    - Admin User will be able to do anything on site. 
    - Admin user can create the other admin users.
  
-     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/31031e80-2306-42ce-a6b0-0d97c182e358)
+     ![10](https://github.com/caleb1711/blog-institue/assets/130179631/e6468215-f4cc-489c-ba10-0ab7cf282539)
+
 
 
 - __LOGOUT__
@@ -87,23 +96,32 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
    - Copyright Information: We respect intellectual property rights. The footer contains copyright information to protect user-generated content and ensure proper attribution.
 
  - __RESPNSIVENESS__
-   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/0c48f9e4-b0a1-434e-a592-1f4c74b6f442)
+   ![11](https://github.com/caleb1711/blog-institue/assets/130179631/e8f441c7-20e6-4334-975a-68c1a8f3f2f1)
+
    - Mobile View
-   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/31dd0fc1-0de6-44f9-9273-f5ae8e6a9f5a)
+   ![12](https://github.com/caleb1711/blog-institue/assets/130179631/2f38b058-0d26-4a10-b1d4-fc95cf9d1371)
 
-   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/c3626256-77d9-412a-a8e4-003a7a9fd10d)
 
-   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/1fd6c35a-f293-4fb2-bccd-4783d3355900)
+   ![13](https://github.com/caleb1711/blog-institue/assets/130179631/bb63c72f-84bf-4ddb-9aec-9660747b2a9a)
 
-   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/e41c7f08-c58a-40e3-b993-e145099c22f7)
 
-   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/a28fc443-739e-428f-98b4-758280579046)
+   ![14](https://github.com/caleb1711/blog-institue/assets/130179631/eec45402-2ed0-465f-8437-89d23216d5c1)
 
-   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/5b69f9f0-cb82-43a6-ab62-37b2d3ec4283)
 
-   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/7b8fde72-fa6b-4d28-b2ea-9cf8368431aa)
+   ![15](https://github.com/caleb1711/blog-institue/assets/130179631/09dd7859-8242-4133-a343-9201ea3389af)
 
-   ![image](https://github.com/caleb1711/blog-institue/assets/130179631/20f833dc-2186-403e-b427-3990bfc04254)
+
+   ![16](https://github.com/caleb1711/blog-institue/assets/130179631/ff3111b6-f775-4859-a259-50cf2e03c00b)
+
+
+   ![17](https://github.com/caleb1711/blog-institue/assets/130179631/19376861-8d18-4e93-8ba5-79e3cd33910d)
+
+
+   ![18](https://github.com/caleb1711/blog-institue/assets/130179631/00a104e9-c6a8-4e6c-854e-7add189c951d)
+
+
+   ![19](https://github.com/caleb1711/blog-institue/assets/130179631/8caac612-6909-4b05-8645-34289fc87e35)
+
 
 
  
@@ -119,7 +137,8 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
    - Python testing done is manually
    - Django testing done manually
    - All the features of our Project is Done
-    ![image](https://github.com/caleb1711/blog-institue/assets/130179631/728dc8df-6bef-4f2f-9adb-75d6d65bb21f)
+    ![20](https://github.com/caleb1711/blog-institue/assets/130179631/809e85c1-8680-4e6f-b556-a491eda53e06)
+
 
 
 
