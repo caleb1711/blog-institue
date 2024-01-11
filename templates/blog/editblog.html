@@ -1,128 +1,51 @@
-{% load static %} 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blog Institute | Edit Blog</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="icon" type="image/x-icon" href="https://lms-juniper-staticfiles-codeinstitute.s3.eu-west-1.amazonaws.com/static/ci-theme/images/favicon.70793afcf85e.ico">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  </head>
-  <body>
-    <div class="container-fluid p-0">
-      <div class="main_header dashboard_header">
-        <div class="container main_header_container">
-          <div class="main_header_text">
-            <a href="{% url 'home' %}" style="text-decoration: none">
-              <h4>Bl<span style="color: #ea2d00">o</span>g</h4>
-              <p>Institute</p>
-            </a>
-          </div>
+{% extends 'base.html' %}
 
-          
-          <div
-            class="dropdown"
-            style="display: flex; flex-direction: column; align-items: center"
-          >
-          {% if request.user.is_authenticated %}
-             <button
-              class="dropdown-toggle header_dropdown_top"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            > 
-               <div class="user_name_and_iamge">
-                <img src="{% static 'images/download.jpeg' %}" alt="" />
-                <h6 class="user_name_top">{{request.user.first_name}}</h6>
-              </div>
-            </button>
-            <ul class="dropdown-menu dropdown_menu_item">
-              <li>
-                <a class="dropdown-item item_1" href="{% url 'myblogs' %}"
-                  >My Blogs</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item item_1" href="{% url 'addblog' %}"
-                  >Add Blog</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item item_1" href="{% url 'logout' %}"
-                  >Log Out</a
-                >
-              </li>
-            </ul> 
-            {% else %}
-            <a href="{% url 'login' %}" class="item_1" style="text-decoration:none;" > Login </a>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-      <div class="container blog_container">
-          
-        <h1 class="m-3 text-center">Edit BLOG</h1>
-        {% if messages %}
-        
-        {% for message in messages %}
-        
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-          {{ message }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        {% endfor %} 
-   
-{% endif %}
-        {% if form.errors %}
-          <div class="alert alert-danger">
-              <ul>
-                  {% for field,  error in form.errors.items %}
-                  <li>{{ error }}</li>
-                  {% endfor %} 
-              </ul>
-          </div>
-          {% endif %}
-        <hr class="mb-3" />
-        <div class="row mb-5">
-            <form  method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="form-group mb-3">
-                    <label for="inputAddress2">Title</label>
-                    <input type="file" class="form-control" name="{{form.image.name}}" id="inputAddress2" placeholder="Enter Blog Image..." value="{{form.image.value}}" >
-                </div>
-                <div class="form-group mb-3">
-                    <label for="inputAddress2">Title</label>
-                    <input type="text" class="form-control" value="{{form.title.value}}" name="{{form.title.name}}" id="inputAddress2" placeholder="Enter title..." required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="exampleFormControlTextarea1">Blog Content</label>
-                    <textarea class="form-control" value="{{form.content.value}}" name="{{form.content.name}}" id="exampleFormControlTextarea1" rows="5" required> {{form.content.value}} </textarea>
-                  </div>
+{% block title %}Blog Institute | Edit Blog{% endblock %}
 
-                <button type="submit" class="btn btn-primary w-100"  > Edit Blog </button>
-                
-            </form>
-         
-        </div>
-      </div>
+{% block content %}
+<div class="container blog_container">
+          
+  <h1 class="m-3 text-center">Edit BLOG</h1>
+  {% if messages %}
+  
+    {% for message in messages %}
+  
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+    {% endfor %} 
 
-    <footer class="footer">
-      <div class="footer-content">
-          <p>&copy; 2023 Blog Institute. All rights reserved.</p>
-      </div>
-  </footer>
+  {% endif %}
+  {% if form.errors %}
+    <div class="alert alert-danger">
+        <ul>
+            {% for field,  error in form.errors.items %}
+            <li>{{ error }}</li>
+            {% endfor %} 
+        </ul>
+    </div>
+    {% endif %}
+  <hr class="mb-3" />
+  <div class="row mb-5">
+      <form  method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group mb-3">
+              <label for="inputAddress2">Title</label>
+              <input type="file" class="form-control" name="{{form.image.name}}" id="inputAddress2" placeholder="Enter Blog Image..." value="{{form.image.value}}" >
+          </div>
+          <div class="form-group mb-3">
+              <label for="inputAddress2">Title</label>
+              <input type="text" class="form-control" value="{{form.title.value}}" name="{{form.title.name}}" id="inputAddress2" placeholder="Enter title..." required>
+          </div>
+          <div class="form-group mb-3">
+              <label for="exampleFormControlTextarea1">Blog Content</label>
+              <textarea class="form-control" value="{{form.content.value}}" name="{{form.content.name}}" id="exampleFormControlTextarea1" rows="5" required> {{form.content.value}} </textarea>
+            </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+          <button type="submit" class="btn btn-primary w-100"  > Edit Blog </button>
+          
+      </form>
+   
+  </div>
+{% endblock %}

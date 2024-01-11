@@ -90,3 +90,10 @@ class BlogDetail(View):
         blog = Blog.objects.get(id=id)
         form = BlogDetailForm()
         return render(request, "blogdetails.html", {"form": form, "blog": blog})
+    
+
+class PrivacyView(View):
+
+    def get(self, request):       
+        return render(request, "privacy_policy.html")
+        

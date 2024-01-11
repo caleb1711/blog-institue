@@ -9,4 +9,7 @@ urlpatterns = [
     path("blog/<int:id>/", delete_blog, name="deleteblog"),
     path("addblog/", AddBlog.as_view(), name="addblog"),
     path("editblog/<int:id>/", EditBlog.as_view(), name="editblog"),
+    path("privacy/", PrivacyView.as_view(), name="privacy"),
+
+
 ]
