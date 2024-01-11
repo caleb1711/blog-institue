@@ -420,3 +420,59 @@
     }
 
 }
+
+/* privacy */
+
+    .privacy-box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        background-color: #f8f9fa;
+    }
+
+    .privacy-box h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .privacy-box a {
+        color: #dc3545;
+        text-decoration: none;
+    }
+
+    .privacy-box a:hover {
+        text-decoration: underline;
+    }
+
+    .numaric_div {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .numaric_div h3 {
+        background-color: #dc3545;
+        color: #fff;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        margin-right: 10px;
+    }
+
+    .terms_p_div {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .alpha_a {
+        margin-right: 5px;
+    }
+
+    .terms_p_empty {
+        margin-top: 10px;
+    }
+
