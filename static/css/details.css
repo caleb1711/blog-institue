@@ -3,6 +3,44 @@
     padding-left: 0px;
 }
 
+.custom-header {
+    background-color: #f8f9fa; 
+    padding: 10px; 
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-header .navbar-nav .nav-link {
+    color: black !important;
+    font-weight: bold;
+}
+.custom-header .navbar-nav {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+.custom-header .main_header_text {
+    margin-left: 1rem;
+    margin-right: auto;
+}
+.custom-header .navbar-nav .nav-link.active {
+    color: red !important;
+    text-decoration: underline !important;
+}
+.custom-header .navbar-nav .login-btn {
+    background-color: red;
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.custom-header .navbar-nav .register-btn {
+    background-color: #445261;
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
 .list_detail_flex {
     display: flex;
     justify-content: space-between;
