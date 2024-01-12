@@ -14,7 +14,7 @@ env = environ.Env(
 )
 
 # Take environment variables from .env file
-# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 SECRET_KEY = env('SECRET_KEY')
 
@@ -115,7 +115,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # FOR LIVE SERVER 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# for local url
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 
 # media 
@@ -123,10 +127,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-# for local url
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-# ]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Default primary key field type
