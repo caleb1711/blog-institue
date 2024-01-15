@@ -1,148 +1,139 @@
 {% load static %} 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% block title %}Blog Institute{% endblock %}</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="icon" type="image/x-icon" href="{% static 'ci-theme/images/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/details.css' %}" />
-  </head>
-  <body>
-    <div class="container-fluid p-0">
-      <div class="main_header dashboard_header">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light custom-header">
-                <div class="main_header_text">
-                    <a href="{% url 'home' %}" style="text-decoration: none">
-                        <h4>Bl<span style="color: #ea2d00">o</span>g</h4>
-                        <p>Institute</p>
-                    </a>
-                </div>
-    
-                <div class="navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}" onclick="changeLinkColor(this)">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'privacy' %}" onclick="changeLinkColor(this)">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'privacy' %}" onclick="changeLinkColor(this)">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="changeLinkColor(this)">Contact</a>
-                        </li>
-                        {% if request.user.is_authenticated %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'addblog' %}" onclick="changeLinkColor(this)">Add Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'myblogs' %}" onclick="changeLinkColor(this)">My Blogs</a>
-                            </li>
-                            <li class="nav-item">
-                                <button class="btn login-btn" onclick="redirectTo('{% url 'logout' %}')">Log Out</button>
-                            </li>
-                        {% else %}
-                            <li class="nav-item">
-                                <button class="btn login-btn" onclick="redirectTo('{% url 'login' %}')">Login</button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="btn register-btn"  onclick="redirectTo('{% url 'signup' %}')">Register</button>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </div>
-                
-            </nav>
-        </header>
-        <script>
-            function changeLinkColor(clickedLink) {
-                var links = document.querySelectorAll('.navbar-nav .nav-link');
-                links.forEach(function(link) {
-                    link.classList.remove('active');
-                });
-    
-                clickedLink.classList.add('active');
-            }
-    
-            function redirectTo(url) {
-                window.location.href = url;
-            }
-        </script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    
-      </div>
-      <div class="container blog_container">
-        {% block content %}{% endblock %}
-      </div>
-    </div>
-
-    {% include "footer.html" %}
-  
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"
-      ></script>
-  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Blog Institute{% endblock %}</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link rel="icon" type="image/x-icon" href="{% static 'ci-theme/images/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/details.css' %}" />
+</head>
+<body>
+  <div class="container-fluid p-0">
+    <div class="main_header dashboard_header">
+        <nav class="navbar navbar-expand-lg  custom-header">
+            <div class="main_header_text">
+              <a href="{% url 'home' %}" style="text-decoration: none">
+                <h4>Bl<span style="color: #ea2d00">o</span>g</h4>
+                <p>Institute</p>
+              </a>
+            </div>
+            <button class="navbar-toggler navbar_toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav navbar_nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}" onclick="changeLinkColor(this)">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'privacy' %}" onclick="changeLinkColor(this)">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'privacy' %}" onclick="changeLinkColor(this)">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="changeLinkColor(this)">Contact</a>
+                </li>
+                {% if request.user.is_authenticated %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'addblog' %}" onclick="changeLinkColor(this)">Add Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'myblogs' %}" onclick="changeLinkColor(this)">My Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <button class="btn login-btn" onclick="redirectTo('{% url 'logout' %}')">Log Out</button>
+                  </li>
+                {% else %}
+                  <div class="d-flex gap-3">
+                    <li class="nav-item">
+                        <button class="btn login-btn" onclick="redirectTo('{% url 'login' %}')">Login</button>
+                      </li>
+                      <li class="nav-item">
+                        <button class="btn register-btn"  onclick="redirectTo('{% url 'signup' %}')">Register</button>
+                      </li>
+                  </div>
+                {% endif %}
+              </ul>
+            </div>
+          </nav>
       <script>
-        const button = document.getElementById("login");
-        button.style.padding = "10px 20px"; 
-        button.style.borderRadius = "8px"; 
-        button.style.backgroundColor = "black"; 
-        button.style.color = "white"; 
-  
-          button.addEventListener("mouseenter", function() {
-              button.style.backgroundColor = "black"; 
-              button.style.color = "white"; 
-              button.style.padding = "10px 20px"; 
-              button.style.borderRadius = "8px"; 
+        function changeLinkColor(clickedLink) {
+          var links = document.querySelectorAll('.navbar-nav .nav-link');
+          links.forEach(function(link) {
+            link.classList.remove('active');
           });
-  
-          button.addEventListener("mouseleave", function() {
-            button.style.backgroundColor = "#454545"; 
-            button.style.color = "white"; 
-            button.style.padding = "10px 20px"; 
-            button.style.borderRadius = "8px"; 
-        });
-  
-        const readbutton = document.getElementById("readmore");
-  
-        readbutton.style.padding = "10px 20px"; 
-        readbutton.style.borderRadius = "8px"; 
-        readbutton.style.backgroundColor = "black"; 
-        readbutton.style.color = "white"; 
-  
-        readbutton.addEventListener("mouseenter", function() {
-          readbutton.style.backgroundColor = "black"; 
-          readbutton.style.color = "white"; 
-          readbutton.style.padding = "10px 20px"; 
-          readbutton.style.borderRadius = "8px"; 
-          });
-  
-          readbutton.addEventListener("mouseleave", function() {
-            readbutton.style.backgroundColor = "#454545"; 
-            readbutton.style.color = "white"; 
-            readbutton.style.padding = "10px 20px"; 
-            readbutton.style.borderRadius = "8px"; 
-        });
-  
+
+          clickedLink.classList.add('active');
+        }
+
+        function redirectTo(url) {
+          window.location.href = url;
+        }
       </script>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-  </body>
+    </div>
+    <div class="container blog_container">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+
+  {% include "footer.html" %}
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    const button = document.getElementById("login");
+    button.style.padding = "10px 20px"; 
+    button.style.borderRadius = "8px"; 
+    button.style.backgroundColor = "black"; 
+    button.style.color = "white"; 
+
+    button.addEventListener("mouseenter", function() {
+      button.style.backgroundColor = "black"; 
+      button.style.color = "white"; 
+      button.style.padding = "10px 20px"; 
+      button.style.borderRadius = "8px"; 
+    });
+
+    button.addEventListener("mouseleave", function() {
+      button.style.backgroundColor = "#454545"; 
+      button.style.color = "white"; 
+      button.style.padding = "10px 20px"; 
+      button.style.borderRadius = "8px"; 
+    });
+
+    const readbutton = document.getElementById("readmore");
+
+    readbutton.style.padding = "10px 20px"; 
+    readbutton.style.borderRadius = "8px"; 
+    readbutton.style.backgroundColor = "black"; 
+    readbutton.style.color = "white"; 
+
+    readbutton.addEventListener("mouseenter", function() {
+      readbutton.style.backgroundColor = "black"; 
+      readbutton.style.color = "white"; 
+      readbutton.style.padding = "10px 20px"; 
+      readbutton.style.borderRadius = "8px"; 
+    });
+
+    readbutton.addEventListener("mouseleave", function() {
+      readbutton.style.backgroundColor = "#454545"; 
+      readbutton.style.color = "white"; 
+      readbutton.style.padding = "10px 20px"; 
+      readbutton.style.borderRadius = "8px"; 
+    });
+  </script>
+</body>
 </html>
