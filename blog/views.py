@@ -97,3 +97,8 @@ class PrivacyView(View):
     def get(self, request):       
         return render(request, "privacy_policy.html")
         
+# About Us
+class AboutUsView(View):
+
+    def get(self, request):       
+        return render(request, "about.html")
