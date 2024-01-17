@@ -9,6 +9,25 @@
   padding: 0;
   margin: 0;
 }
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #eceef2;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(
+    top,
+    hsl(8, 20%, 100%) 0%,
+    hsl(8, 40%, 90%) 50%,
+    hsl(8, 50%, 80%) 51%,
+    #ea2d00 100%
+  );
+}
+/* end scrollbar */
 /* .main_header {
   border-bottom: 2px solid #e6ecf0;
   padding: 11px 24px;
