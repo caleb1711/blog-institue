@@ -109,9 +109,16 @@ class ContactUsView(View):
     def get(self, request):       
         return render(request, "contact.html")
     
+# Disclaimer
+class DisclaimerView(View):
+
+    def get(self, request):       
+        return render(request, "disclaimer.html")
+
 
 # Terms and Conditions
 class TermsView(View):
 
     def get(self, request):       
         return render(request, "terms.html")
+
