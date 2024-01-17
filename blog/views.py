@@ -91,9 +91,34 @@ class BlogDetail(View):
         form = BlogDetailForm()
         return render(request, "blogdetails.html", {"form": form, "blog": blog})
     
-
+# Privacy Policy
 class PrivacyView(View):
 
     def get(self, request):       
         return render(request, "privacy_policy.html")
         
+# About Us
+class AboutUsView(View):
+
+    def get(self, request):       
+        return render(request, "about.html")
+    
+# Contact Us
+class ContactUsView(View):
+
+    def get(self, request):       
+        return render(request, "contact.html")
+    
+# Disclaimer
+class DisclaimerView(View):
+
+    def get(self, request):       
+        return render(request, "disclaimer.html")
+
+
+# Terms and Conditions
+class TermsView(View):
+
+    def get(self, request):       
+        return render(request, "terms.html")
+

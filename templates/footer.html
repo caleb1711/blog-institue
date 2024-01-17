@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
     <!-- footer section  Start-->
@@ -24,60 +25,39 @@
         </div>
         <div class="black-section">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-4 logo-link-col">
+                <div class="col-lg-6 col-md-3 col-sm-4 logo-link-col">
                     <a href="{% url 'home' %}" class="logo-link">
-                        <h2 class="text-danger">LOGO</h2>
+                        <div class="main_header_text">
+                            <a href="{% url 'home' %}" style="text-decoration: none">
+                              <h4>Bl<span style="color: #ea2d00">o</span>g</h4>
+                              <p>Institute</p>
+                            </a>
+                          </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-4">
+                
+                <div class="col-lg-3 col-md-2 col-sm-4 col-12">
                     <ul class="list-unstyled">
                         <li>
-                            <a href="{% url 'addblog' %}" class="nav-link">Address  1 is here</a>
+                            <a href="{% url 'about' %}" class="nav-link">About</a>
                         </li>
                         <li>
-                            <a href="{% url 'myblogs' %}" class="nav-link">Address  2 is here</a>
+                            <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
                         </li>
-                        <li>
-                            <a href="{% url 'myblogs' %}" class="nav-link">Address  3 is here</a>
-                        </li>
+                        
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-4 col-12">
+                
+                <div class="col-lg-3 col-md-2 col-sm-4 col-12">
                     <ul class="list-unstyled">
                         <li>
-                            <a href="{% url 'addblog' %}" class="nav-link">Course</a>
+                            <a href="{% url 'privacy' %}" class="nav-link">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="{% url 'myblogs' %}" class="nav-link">Back to call</a>
+                            <a href="{% url 'terms' %}" class="nav-link">Terms & Conditions</a>
                         </li>
                         <li>
-                            <a href="{% url 'myblogs' %}" class="nav-link">Take Quiz</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-4 col-12">
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="{% url 'addblog' %}" class="nav-link">FaceBook</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'myblogs' %}" class="nav-link">InstaGram</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'myblogs' %}" class="nav-link">Whatsapp</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-4 col-12">
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="{% url 'addblog' %}" class="nav-link">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'myblogs' %}" class="nav-link">Terms & Conditions</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'myblogs' %}" class="nav-link">Disclaimer</a>
+                            <a href="{% url 'disclaimer' %}" class="nav-link">Disclaimer</a>
                         </li>
                     </ul>
                 </div>
@@ -85,7 +65,7 @@
         </div>
         
        <div class="copy_rightDiv">
-        <p class="copy_right">© 2023 PropStart Pty Ltd ABN 43 667 595 155. All rights reserved</p>
+        <p class="copy_right">© 2024 BlogInstitute. All rights reserved</p>
        </div>
     </footer>
     

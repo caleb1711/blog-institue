@@ -11,7 +11,7 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous"
   />
-  <link rel="icon" type="image/x-icon" href="{% static 'ci-theme/images/favicon.ico' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'images/fav.png' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" href="{% static 'css/details.css' %}" />
 </head>
@@ -34,13 +34,11 @@
                   <a class="nav-link" href="{% url 'home' %}" onclick="changeLinkColor(this)">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'privacy' %}" onclick="changeLinkColor(this)">About us</a>
+                  <a class="nav-link" href="{% url 'about' %}" onclick="changeLinkColor(this)">About us</a>
                 </li>
+               
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'privacy' %}" onclick="changeLinkColor(this)">Privacy</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#" onclick="changeLinkColor(this)">Contact</a>
+                  <a class="nav-link" href="{% url 'contact' %}" onclick="changeLinkColor(this)">Contact</a>
                 </li>
                 {% if request.user.is_authenticated %}
                   <li class="nav-item">
