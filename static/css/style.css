@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
@@ -36,7 +37,7 @@
   margin-bottom: 0;
   font-size: 15px;
   font-weight: 500;
-  color: #e84610;
+  color: #ea2d00;
   padding-left: 35px;
   margin-top: -3px;
 }
@@ -141,7 +142,7 @@
 
 .dropdown_menu_item a {
   color: #fff;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -302,7 +303,7 @@
   margin-bottom: 20px;
   text-align: center;
 }
-.signup-link{
+.signup-link {
   text-decoration: none;
 }
 .signup-link h2 {
@@ -314,6 +315,108 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+/* privacy */
+
+.privacy-box {
+  border: 1px solid #ccc;
+  padding: 35px 40px 70px 40px !important;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: #f8f9fa;
+}
+.terms_and_conditions_section {
+  margin-bottom: 5rem;
+}
+.terms_and_conditions_section h1 {
+  color: #ea2d00;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 38px;
+}
+.privacy-box h2 {
+  color: #ea2d00;
+  font-family: "Inter";
+  font-size: 32px !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.privacy-box a {
+  text-decoration: none;
+}
+
+.privacy-box a:hover {
+  text-decoration: underline;
+}
+
+.numaric_div {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.numaric_div h3 {
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 10px;
+}
+
+.terms_p_div {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.alpha_a {
+  margin-right: 5px;
+}
+
+.terms_p_empty {
+  margin-top: 10px;
+}
+.desc_section p {
+  color: #000;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.desc_section h3 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.alphaChar {
+  margin-bottom: 2px;
+}
+.headingTitle {
+  text-align: center;
+  color: #ea2d00;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 38px;
 }
 @media screen and (max-width: 1200px) {
   .blog_date p {
@@ -334,10 +437,32 @@
   }
 }
 @media screen and (max-width: 578px) {
+  .desc_section ul {
+    padding-left: 20px !important;
+  }
+  .blog_container {
+    margin-top: 9rem;
+  }
+  .terms_and_conditions_section h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .desc_section h3 {
+    font-size: 17px;
+  }
+  .desc_section p {
+    font-size: 15px;
+  }
+  .privacy-box h2 {
+    font-size: 24px !important;
+  }
+  .privacy-box {
+    padding: 25px 24px 50px 24px !important;
+  }
   .footerText {
     border-radius: 70px 70px 0 0;
     padding: 60px 20px;
-}
+  }
   .footerText h1 {
     font-size: 28px;
     margin-bottom: 15px;
