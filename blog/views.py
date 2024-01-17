@@ -108,3 +108,10 @@ class ContactUsView(View):
 
     def get(self, request):       
         return render(request, "contact.html")
+    
+
+# Terms and Conditions
+class TermsView(View):
+
+    def get(self, request):       
+        return render(request, "terms.html")
