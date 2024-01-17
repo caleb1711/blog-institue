@@ -262,7 +262,7 @@ body::-webkit-scrollbar-thumb {
 }
 .logo-link-col {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 .copy_rightDiv {
   background: #445261;
@@ -289,6 +289,10 @@ body::-webkit-scrollbar-thumb {
     font-weight: 700;
     line-height: normal;
     text-align: center;
+}
+hr{
+  color: #EA2D00;
+  background-color: #EA2D00;
 }
 .logo-link {
   text-decoration: none;
@@ -344,6 +348,73 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   line-height: normal;
 }
+
+/* blod edit add design changes */
+.uploaded_img_div{
+  width: 255px;
+  height: 255px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  margin: 0 auto;
+  border: 1px solid #ea2d00;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.image_input {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+.image_label {
+  border-radius: 50px;
+  background-color: #323232;
+  color: #fff;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal; /* 584.939% */
+  text-transform: capitalize;
+  width: 202px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.form-control {
+  background-color: #D9D9D9 !important;
+  border:  2px solid #8C9298;
+  padding: 20px;
+}
+.addblogbtn{
+  background-color: #ea2d00;
+  padding: 10px;
+  color: white;
+  font-weight: 700;
+  border: 2px solid #ea2d00;
+  margin-top: 20px;
+}
+.addblogbtn:hover{
+  border: 2px solid #ea2d00;
+  color: #000;
+}
+.add_label{
+  font-weight: 600;
+  padding: 10px 0px;
+}
+.uploaded_img{
+  width: 250px;
+  height: 250px;
+  border-radius: 49%;
+}
+/*  */
 
 /* privacy */
 

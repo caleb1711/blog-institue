@@ -26,70 +26,48 @@
 {% endif %}
 <hr class="mb-3" />
 <div class="row mb-5">
-    <form  method="post" enctype="multipart/form-data">
+    <form  method="post" enctype="multipart/form-data"  onsubmit="return confirmSubmit()">
         {% csrf_token %}
-        <div class="form-group mb-3">
-            <label for="inputAddress2">Title</label>
-            <input type="file" class="form-control" name="{{form.image.name}}" id="inputAddress2" placeholder="Enter Blog Image..." required>
+        <div class="mb-3">
+          <div class="uploaded_img_div">
+              <img src="" class="uploaded_img" alt="My Blog Image">
+          </div>
+            <label for="inputAddress2" class="image_label" >Upload Blog Image</label>
+            <input type="file" class="image_input" name="{{form.image.name}}" id="inputAddress2" placeholder="Enter Blog Image..." required>
         </div>
         <div class="form-group mb-3">
-            <label for="inputAddress2">Title</label>
+            <label for="inputAddress2" class="add_label">Blog Title</label>
             <input type="text" class="form-control" name="{{form.title.name}}" id="inputAddress2" placeholder="Enter title..." required>
         </div>
         <div class="form-group mb-3">
-            <label for="exampleFormControlTextarea1">Blog Content</label>
-            <textarea class="form-control" name="{{form.content.name}}" id="exampleFormControlTextarea1" rows="5" required></textarea>
+            <label for="exampleFormControlTextarea1" class="add_label">Blog Content</label>
+            <textarea class="form-control" name="{{form.content.name}}" id="exampleFormControlTextarea1" placeholder="Enter Content..." rows="5" required></textarea>
           </div>
 
-        <button type="submit" class="btn btn-primary w-100"  > Add Blog </button>
+        <button type="submit" class="btn w-100 addblogbtn"  > Save </button>
         
     </form>
  
 </div>
 
+
+<script>
+  let input=document.getElementById('inputAddress2')
+input.addEventListener('change',function(){
+  const reader=new FileReader()
+  reader.addEventListener('load',function(){
+      document.querySelector('.uploaded_img').src=`${reader.result}`
+  })
+  reader.readAsDataURL(this.files[0])
+})
+
+function confirmSubmit() {
+  return confirm("Are you sure you want to save this blog?");
+}
+</script>
 {% endblock %}
 
 
 
 
 
-
-{% load static %} 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blog Institute | Add Blog</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="icon" type="image/x-icon" href="https://lms-juniper-staticfiles-codeinstitute.s3.eu-west-1.amazonaws.com/static/ci-theme/images/favicon.70793afcf85e.ico">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  </head>
-  <body>
-    <div class="container-fluid p-0">
-      <div class="main_header dashboard_header">
-        {% include "nav_bar.html" %}
-      </div>
-      <div class="container blog_container">
-          
-        
-
-    <footer class="footer">
-      <div class="footer-content">
-          <p>&copy; 2023 Blog Institute. All rights reserved.</p>
-      </div>
-  </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
-create base.html file for this
