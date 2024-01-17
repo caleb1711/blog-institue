@@ -5,7 +5,7 @@
 {% block content %}
 <div class="container blog_container">
           
-  <h1 class="m-3 text-center">Edit BLOG</h1>
+  <h1 class="m-3 text-center allblogs">Edit BLOG</h1>
   {% if messages %}
   
     {% for message in messages %}
@@ -28,24 +28,46 @@
     {% endif %}
   <hr class="mb-3" />
   <div class="row mb-5">
-      <form  method="post" enctype="multipart/form-data">
+      <form  method="post" enctype="multipart/form-data" onsubmit="return confirmSubmit()">
           {% csrf_token %}
-          <div class="form-group mb-3">
-              <label for="inputAddress2">Title</label>
-              <input type="file" class="form-control" name="{{form.image.name}}" id="inputAddress2" placeholder="Enter Blog Image..." value="{{form.image.value}}" >
+          <div class="mb-3">
+            <div class="uploaded_img_div">
+              {% if form.instance.image %}
+              <img src="{{ form.instance.image.url }}" class="uploaded_img" alt="My Blog Image">
+          {% endif %}
+            </div>
+              <label for="inputAddress2" class="image_label">Upload new image</label>
+              <input type="file" class="image_input" name="{{form.image.name}}" id="inputAddress2" placeholder="Enter Blog Image..." value="{{form.image.value}}" >
+              
           </div>
           <div class="form-group mb-3">
-              <label for="inputAddress2">Title</label>
+              <label for="inputAddress2" class="add_label">Blog Title</label>
               <input type="text" class="form-control" value="{{form.title.value}}" name="{{form.title.name}}" id="inputAddress2" placeholder="Enter title..." required>
           </div>
           <div class="form-group mb-3">
-              <label for="exampleFormControlTextarea1">Blog Content</label>
+              <label for="exampleFormControlTextarea1" class="add_label">Blog Content</label>
               <textarea class="form-control" value="{{form.content.value}}" name="{{form.content.name}}" id="exampleFormControlTextarea1" rows="5" required> {{form.content.value}} </textarea>
             </div>
 
-          <button type="submit" class="btn btn-primary w-100"  > Edit Blog </button>
+          <button type="submit" class="btn btn-primary w-100 addblogbtn"> Save Changes</button>
           
       </form>
    
   </div>
+
+  <script>
+    let input=document.getElementById('inputAddress2')
+  input.addEventListener('change',function(){
+    const reader=new FileReader()
+    reader.addEventListener('load',function(){
+        document.querySelector('.uploaded_img').src=`${reader.result}`
+    })
+    reader.readAsDataURL(this.files[0])
+  })
+  
+  function confirmSubmit() {
+    return confirm("Are you sure you want to save changes of this blog?");
+  }
+  </script>
+
 {% endblock %}
