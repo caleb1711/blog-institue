@@ -40,7 +40,7 @@
                   <a class="nav-link" href="{% url 'privacy' %}" onclick="changeLinkColor(this)">Privacy</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" onclick="changeLinkColor(this)">Contact</a>
+                  <a class="nav-link" href="{% url 'contact' %}" onclick="changeLinkColor(this)">Contact</a>
                 </li>
                 {% if request.user.is_authenticated %}
                   <li class="nav-item">

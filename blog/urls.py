@@ -11,5 +11,5 @@ urlpatterns = [
     path("editblog/<int:id>/", EditBlog.as_view(), name="editblog"),
     path("privacy/", PrivacyView.as_view(), name="privacy"),
     path("about/", AboutUsView.as_view(), name="about"),
-
+    path("contact/", ContactUsView.as_view(), name="contact"),
 ]

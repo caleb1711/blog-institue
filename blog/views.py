@@ -91,7 +91,7 @@ class BlogDetail(View):
         form = BlogDetailForm()
         return render(request, "blogdetails.html", {"form": form, "blog": blog})
     
-
+# Privacy Policy
 class PrivacyView(View):
 
     def get(self, request):       
@@ -102,3 +102,9 @@ class AboutUsView(View):
 
     def get(self, request):       
         return render(request, "about.html")
+    
+# Contact Us
+class ContactUsView(View):
+
+    def get(self, request):       
+        return render(request, "contact.html")
