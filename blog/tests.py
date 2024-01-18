@@ -5,6 +5,7 @@ from django.test import RequestFactory
 from django.contrib.auth import get_user_model
 from blog.views import HomeView
 from blog.models import Blog
+from blog.forms import AddBlogForm
 
 User = get_user_model()
 
@@ -75,3 +76,30 @@ class DeleteBlogViewTestCase(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Blog.objects.count(), initial_count - 1)
         self.assertRedirects(response, reverse('myblogs'))
+
+# Add Blog Test Case
+class AddBlogViewTestCase(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(email='abu@gmail.com', password='testpassword')
+        self.client.login(email='abu@gmail.com', password='testpassword')
+
+    def test_get_add_blog(self):
+        response = self.client.get(reverse('addblog'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blog/addblog.html')
+        self.assertIsInstance(response.context['form'], AddBlogForm)
+
+    def test_post_add_blog(self):
+        initial_blog_count = Blog.objects.count()
+
+        image = SimpleUploadedFile("image1.jpg", b"file_content", content_type="image/jpeg")
+        
+        post_data = {
+            'image': image,
+            'title': 'Test Blog',
+            'content': 'Test Content',
+        }
+        response = self.client.post(reverse('addblog'), data=post_data, follow=True)
+        
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blog/addblog.html')
