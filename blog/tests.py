@@ -5,7 +5,7 @@ from django.test import RequestFactory
 from django.contrib.auth import get_user_model
 from blog.views import HomeView
 from blog.models import Blog
-from blog.forms import AddBlogForm
+from blog.forms import AddBlogForm, EditBlogForm
 
 User = get_user_model()
 
@@ -103,3 +103,42 @@ class AddBlogViewTestCase(TestCase):
         
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'blog/addblog.html')
+
+
+# Edit Blog test case
+
+class EditBlogViewTestCase(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(email='abu@gmail.com', password='testpassword')
+        self.client.login(email='abu@gmail.com', password='testpassword')
+
+        image = SimpleUploadedFile("image1.jpg", b"file_content", content_type="image/jpeg")
+        self.blog = Blog.objects.create(title='Test Blog', content='Test Content', user=self.user, image=image)
+
+    def test_get_edit_blog_view(self):
+        response = self.client.get(reverse('editblog', args=[self.blog.id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blog/editblog.html')
+        self.assertIsInstance(response.context['form'], EditBlogForm)
+
+    def test_post_edit_blog_view(self):
+        initial_title = self.blog.title
+        initial_content = self.blog.content
+
+        post_data = {
+            'title': 'Updated Title',
+            'content': 'Updated Content',
+        }
+
+        response = self.client.post(reverse('editblog', args=[self.blog.id]), data=post_data, follow=True)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blog/myblogs.html')
+        self.assertContains(response, 'Your blog edited successfully!')
+
+        updated_blog = Blog.objects.get(id=self.blog.id)
+
+        self.assertNotEqual(updated_blog.title, initial_title)
+        self.assertNotEqual(updated_blog.content, initial_content)
+        self.assertEqual(updated_blog.title, 'Updated Title')
+        self.assertEqual(updated_blog.content, 'Updated Content')
