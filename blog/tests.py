@@ -174,3 +174,13 @@ class BlogDetailViewTestCase(TestCase):
         self.assertEqual(saved_comment.content, 'Test Comment')
         self.assertEqual(saved_comment.user, self.user)
         self.assertEqual(saved_comment.blog, self.blog)
+
+
+# About Us View Test Case
+class AboutUsViewTestCase(TestCase):
+    def test_about_us_view(self):
+        response = self.client.get(reverse('about'))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'about.html')
+        self.assertContains(response, 'About Us') 
