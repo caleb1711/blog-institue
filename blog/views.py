@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
 from django.views import View
 from django.contrib import messages
 from blog.models import (
@@ -19,6 +21,7 @@ class HomeView(View):
         return render(request, "index.html", context)
     
 # My Blogs
+@method_decorator(login_required, name='dispatch')
 class MyBlogsView(View):
 
     def get(self, request):
@@ -31,6 +34,7 @@ class MyBlogsView(View):
         return render(request, "blog/myblogs.html", context)
     
 # Delete Blogs
+@login_required
 def delete_blog(request, id):
     blog = Blog.objects.get(id=id)
     blog.delete()
@@ -39,6 +43,7 @@ def delete_blog(request, id):
 
 
 # Add Blog
+@method_decorator(login_required, name='dispatch')
 class AddBlog(View):
     def post(self, request):
         user = request.user
@@ -55,6 +60,7 @@ class AddBlog(View):
         return render(request, "blog/addblog.html", {"form": form})
     
 # Edit Blog
+@method_decorator(login_required, name='dispatch')
 class EditBlog(View):
     def post(self, request, id):
         user = request.user
