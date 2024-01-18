@@ -175,6 +175,14 @@ class BlogDetailViewTestCase(TestCase):
         self.assertEqual(saved_comment.user, self.user)
         self.assertEqual(saved_comment.blog, self.blog)
 
+# Privacy Policy Test Case
+class PrivacyViewTestCase(TestCase):
+    def test_privacy_view(self):
+        response = self.client.get(reverse('privacy'))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'privacy_policy.html')
+        self.assertContains(response, 'Privacy Policy')  
 
 # About Us View Test Case
 class AboutUsViewTestCase(TestCase):
