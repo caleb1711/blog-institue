@@ -4,8 +4,8 @@ from django.urls import reverse
 from django.test import RequestFactory
 from django.contrib.auth import get_user_model
 from blog.views import HomeView
-from blog.models import Blog
-from blog.forms import AddBlogForm, EditBlogForm
+from blog.models import Blog, Comment
+from blog.forms import AddBlogForm, EditBlogForm, BlogDetailForm
 
 User = get_user_model()
 
@@ -142,3 +142,35 @@ class EditBlogViewTestCase(TestCase):
         self.assertNotEqual(updated_blog.content, initial_content)
         self.assertEqual(updated_blog.title, 'Updated Title')
         self.assertEqual(updated_blog.content, 'Updated Content')
+
+# Blog Details Test Case
+class BlogDetailViewTestCase(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(email='abu@gmail.com', password='testpassword')
+        self.client.login(email='abu@gmail.com', password='testpassword')
+
+        image = SimpleUploadedFile("test_image.jpg", content=b"test_image_content", content_type="image/jpeg")
+        self.blog = Blog.objects.create(title='Test Blog', content='Test Content', user=self.user, image=image)
+
+    def test_get_blog_detail_view(self):
+        response = self.client.get(reverse('blog_detail', args=[self.blog.id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blogdetails.html')
+        self.assertIsInstance(response.context['form'], BlogDetailForm)
+        self.assertEqual(response.context['blog'], self.blog)
+
+    def test_post_blog_detail_view(self):
+        post_data = {
+            'content': 'Test Comment',
+        }
+
+        response = self.client.post(reverse('blog_detail', args=[self.blog.id]), data=post_data, follow=True)
+
+        self.assertEqual(response.status_code, 200)  
+        self.assertTemplateUsed(response, 'blogdetails.html')
+
+        self.assertEqual(Comment.objects.count(), 1)
+        saved_comment = Comment.objects.first()
+        self.assertEqual(saved_comment.content, 'Test Comment')
+        self.assertEqual(saved_comment.user, self.user)
+        self.assertEqual(saved_comment.blog, self.blog)
