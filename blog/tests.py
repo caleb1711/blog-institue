@@ -187,6 +187,7 @@ class AboutUsViewTestCase(TestCase):
 
 
 # About Us View Test Case
+
 class ContactUsViewTestCase(TestCase):
     def test_about_us_view(self):
         response = self.client.get(reverse('contact'))
@@ -194,3 +195,12 @@ class ContactUsViewTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'contact.html')
         self.assertContains(response, 'Contact Us') 
+
+class DisclaimerViewTestCase(TestCase):
+    def test_disclaimer_us_view(self):
+        response = self.client.get(reverse('disclaimer'))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'disclaimer.html')
+        self.assertContains(response, 'Disclaimer') 
+
