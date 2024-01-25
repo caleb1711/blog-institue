@@ -2,6 +2,27 @@
 Blogs Institute is a full-featured blogging platform that empowers users to share their thoughts, ideas, and stories with the world. Whether you're an aspiring writer or a seasoned blogger, our platform provides the tools and features you need to create, manage, and engage with your blog content.
 
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Screenshots](#screenshots)
+3. [Features](#key-features)
+4. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+   - [Setup Virtual Environment](#setup-virtual-environment)
+5. [Code Structure](#code-structure)
+6. [Continuous Integration and Testing](#continuous-integration-and-testing)
+7. [Deployment](#deployment)
+8. [Acknowledgments](#acknowledgments)
+9. [Contact](#contact)
+
+
+## Introduction
+
+Blogs Institute offers a unique platform for bloggers, providing a user-friendly interface and robust features. This README aims to guide users through the setup, features, and deployment of the platform.
+
+
 - __Home Page__
 
   - User can see all of the blogs in home page after clicking on read more button user will go to the blog detail page .
@@ -95,7 +116,9 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
 - __FOOTER__
    - Copyright Information: We respect intellectual property rights. The footer contains copyright information to protect user-generated content and ensure proper attribution.
 
- - __RESPNSIVENESS__
+ - __ScreenShots__
+
+
    ![11](https://github.com/caleb1711/blog-institue/assets/130179631/e8f441c7-20e6-4334-975a-68c1a8f3f2f1)
 
    - Mobile View
@@ -124,6 +147,17 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
 
 
 
+## Key Features
+
+- Full Authentication System
+- User account management (create, login, forgot password, reset password)
+- Blog post creation with title, content, and images
+- Blog post editing and updating
+- Blog post deletion
+- Commenting on blog posts
+- Image upload and display in blog posts and comments
+
+
  
 - __FONT SIZE__
    - Robot font is used in our website.
@@ -131,14 +165,6 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
    - @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap");
    - @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
    - @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
-
-- __VALIDATOR TESTING__
-   - VALIDATOR TESTING with wc3 of all the front end .
-   - Python testing done is manually
-   - Django testing done manually
-   - All the features of our Project is Done
-    ![20](https://github.com/caleb1711/blog-institue/assets/130179631/809e85c1-8680-4e6f-b556-a491eda53e06)
-
 
 
 
@@ -150,21 +176,7 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
    - Exploring all user features, including registration, login, blog creation, editing, commenting, and account management.
 
 
-- __DEPLOYMENT__
-   - This site will deploye on heroku as soon.
 
-- __CREDITS__
-   - Bootsrap , Roboto Fonts 
- 
-
-  ### Media
-
-- The photos used on the website is our owned images .
-- All images is coming from the backend
-
-  ### Code Structure
-
-- Code is with comments and you will  easily understand how it works.
 
   ### Tools
 - Front end
@@ -181,31 +193,27 @@ Blogs Institute is a full-featured blogging platform that empowers users to shar
 
   
   
-## Key Features
 
-- Full Authentication System
-- User can create his account, login, forgot password and reset password. 
-- Create a new blog post with a title, content, and images.
-- Edit and update existing blog posts.
-- Delete unwanted blog posts.
-- View and read blog posts.
-- Leave comments on blog posts.
-- Upload and display images in blog posts and comments.
 
 ## Getting Started
-Make sure python and django are installed in your system. 
 
-## Installation
+### Prerequisites
 
-1. Prerequisites:
-   - asgiref==3.7.2
-   - Django==4.2.7
-   - Pillow==10.1.0
-   - sqlparse==0.4.4
-   - typing_extensions==4.8.0
+Ensure you have the following dependencies installed:
 
-2. Clone the repository:
-   - https://github.com/caleb1711/blog-institue
+- asgiref==3.7.2
+- Django==4.2.7
+- Pillow==10.1.0
+- sqlparse==0.4.4
+- typing_extensions==4.8.0
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/caleb1711/blog-institute
+
 
 ### Setup virtual environment
 Create a virtual environment using python3
@@ -229,17 +237,70 @@ pip install -r requirements.txt
     python manage.py runserver
 ```
 
-## Authors
+## Code Structure
 
-- Calkra15@outlook.com
+The codebase is organized into several main components for clarity and maintainability. Here's an overview of the key directories:
+
+- **`/accounts`**: Contains the main Django application logic for the user Profile data.
+- **`/blogs`**: Contains the main Django application logic for the blogging platform.
+- **`/core`**: The root directory of the project.
+- **`/static`**: Stores static files such as CSS, JavaScript, and images.
+- **`/templates`**: Holds HTML templates used by the Django templating engine.
+- **`manage.py`**: Django's command-line utility for managing the project.
+- **`requirements.txt`**: Lists all Python dependencies for the project.
+
+Feel free to explore each directory to understand the specific functionality and organization of the codebase.
+
+
+## Continuous Integration and Testing
+
+- The project follows best practices for continuous integration and testing to ensure code quality and reliability. Key points in this process include:
+
+### Automated Testing
+
+We have implemented a comprehensive suite of automated tests to validate the functionality of different components. These tests cover unit tests, integration tests, and end-to-end tests. To run the tests locally, use the following command:
+
+```bash
+
+Python3 manage.py test
+
+```
+
+
+
+- __VALIDATOR TESTING__
+   - VALIDATOR TESTING with wc3 of all the front end .
+   - Python testing done is manually
+   - Django testing done manually
+   - All the features of our Project is Done
+    ![20](https://github.com/caleb1711/blog-institue/assets/130179631/809e85c1-8680-4e6f-b556-a491eda53e06)
+
+
+
+## DEPLOYMENT
+
+- This site will be deployed on Heroku. Detailed deployment instructions will be provided soon.
 
 
 ## Acknowledgments
 
-- Credit any resources, libraries, or individuals you'd like to acknowledge.
+We would like to extend our appreciation to the following individuals and resources that have contributed to the development and success of Blogs Institute:
+
+- **Bootstrap and Roboto Fonts**: Special thanks to the Bootstrap framework and Roboto font family for enhancing the visual design and responsiveness of our website.
+
+- **Django**: A big shoutout to the Django framework for powering the backend of our blogging platform.
+
+- **GitHub**: Our project is hosted on GitHub, providing a collaborative and version-controlled environment.
+
+
+These contributions have played a crucial role in shaping Blogs Institute, and we want to express our sincere thanks to everyone involved.
+
+
+## Authors
+
+- Calkra15@outlook.com
 
 ## Contact
 
 If you have any questions or need support, you can reach me at Calkra15@outlook.com
 .
-
