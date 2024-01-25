@@ -218,8 +218,8 @@ Ensure you have the following dependencies installed:
 ### Setup virtual environment
 Create a virtual environment using python3
 ```bash
+    cd blog-institute
     python3 -m venv venv
-    cd book-writer
 ```
 Activate the virtual environment
 ```bash
