@@ -1,21 +1,32 @@
 # Blogs Institute
 Blogs Institute is a full-featured blogging platform that empowers users to share their thoughts, ideas, and stories with the world. Whether you're an aspiring writer or a seasoned blogger, our platform provides the tools and features you need to create, manage, and engage with your blog content.
 
+## Intent
+
+The primary intent behind the creation of Blogs Institute is to offer a comprehensive and user-friendly platform for individuals who want to express themselves through blogging. We aim to:
+
+1. Empower Writers: Provide a space where writers of all levels can showcase their creativity, expertise, and unique perspectives.
+
+2. User-Friendly Experience: Ensure a seamless and intuitive experience for both novice and experienced bloggers with a user-friendly interface.
+
+3. Feature-Rich Platform: Offer a plethora of features, including a full authentication syste
 
 ## Table of Contents
 
 1. [Introduction](#introduction)
 2. [Screenshots](#screenshots)
 3. [Features](#key-features)
-4. [Getting Started](#getting-started)
+4. [Security Features](#security-features)
+5. [Getting Started](#getting-started)
    - [Prerequisites](#prerequisites)
    - [Installation](#installation)
    - [Setup Virtual Environment](#setup-virtual-environment)
-5. [Code Structure](#code-structure)
-6. [Continuous Integration and Testing](#continuous-integration-and-testing)
-7. [Deployment](#deployment)
-8. [Acknowledgments](#acknowledgments)
-9. [Contact](#contact)
+6. [Code Structure](#code-structure)
+7. [Data Schema and Relationships](#data-schema-and-relationships)
+7. [Continuous Integration and Testing](#continuous-integration-and-testing)
+8. [Deployment](#deployment)
+9. [Acknowledgments](#acknowledgments)
+10. [Contact](#contact)
 
 
 ## Introduction
@@ -146,16 +157,51 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
    ![19](https://github.com/caleb1711/blog-institue/assets/130179631/8caac612-6909-4b05-8645-34289fc87e35)
 
 
+## Features
 
-## Key Features
+### Authentication System
 
-- Full Authentication System
-- User account management (create, login, forgot password, reset password)
-- Blog post creation with title, content, and images
-- Blog post editing and updating
-- Blog post deletion
-- Commenting on blog posts
-- Image upload and display in blog posts and comments
+- **User Registration:** Allow users to create accounts and register on the platform.
+- **User Login:** Provide secure user authentication with login functionality.
+- **Password Reset:** Enable users to reset their passwords in case of forgetfulness.
+
+### Blog CRUD Operations
+
+- **Create Blog Posts:** Authenticated users can create new blog posts with a title, content, and optional images.
+- **Read Blog Posts:** Display a list of blog posts, and users can view the details of each post individually.
+- **Update Blog Posts:** Allow authors to edit and update their existing blog posts.
+- **Delete Blog Posts:** Provide an option to delete blog posts for authorized users.
+
+### Security Features
+
+Blogs Institute prioritizes security to protect user data and ensure a safe environment for both bloggers and readers. The following security features are implemented:
+
+- **CSRF Protection:**
+  - Cross-Site Request Forgery (CSRF) protection is implemented to prevent unauthorized third-party sites from making malicious requests on behalf of a user. Django provides built-in CSRF protection by generating and validating unique tokens for each form submission.
+
+- **Password Hashing:**
+  - User passwords are stored securely using strong cryptographic hashing. Django automatically uses a secure password hashing algorithm to hash and salt user passwords. This ensures that even if the database is compromised, passwords remain protected.
+
+- **User Authentication:**
+  - Django's authentication system is used to manage user sessions and authenticate users securely. It includes features like session-based authentication and cookie-based authentication, making it resistant to common attacks like session hijacking.
+
+- **Authorization and Permissions:**
+  - User permissions are strictly enforced to control access to different parts of the application. Only authenticated and authorized users have access to perform CRUD operations on blog posts. Django's built-in permission system is leveraged to define and enforce authorization rules.
+
+- **HTTPS Protocol:**
+  - Blogs Institute enforces the use of the HTTPS protocol to secure data transmitted between the user's browser and the server. This ensures the confidentiality and integrity of user data during transit.
+
+- **Content Security Policy (CSP):**
+  - A Content Security Policy is implemented to mitigate the risk of cross-site scripting (XSS) attacks. CSP helps prevent the execution of malicious scripts by defining a whitelist of trusted sources for content, scripts, and other resources.
+
+- **Database Security:**
+  - Django employs database security measures to protect against SQL injection attacks. Query parameters and prepared statements are used to ensure that user inputs are sanitized before interacting with the database.
+
+- **Django Security Updates:**
+  - Regularly updating Django to the latest version is encouraged to benefit from the latest security patches and enhancements. This helps to address any vulnerabilities that may be discovered in the framework.
+
+- **Security Headers:**
+  - Appropriate security headers, such as Strict-Transport-Security (HSTS) and X-Content-Type-Options, are set to enhance the overall security posture of the application.
 
 
  
@@ -252,20 +298,165 @@ The codebase is organized into several main components for clarity and maintaina
 Feel free to explore each directory to understand the specific functionality and organization of the codebase.
 
 
+# Data Schema and Relationships
+
+This section provides an overview of the data schema and relationships within the Blogs Institute Django application.
+
+## Data Models
+
+### 1. User Model (Customized from `AbstractUser`)
+
+Represents user information within the application.
+
+- Fields:
+  - `id`: Primary key
+  - `email`: User's email address (unique)
+  - `forgot_email_token`: Token for email-related operations (null and blank allowed)
+  - `USERNAME_FIELD`: Set to 'email' for authentication
+  - `REQUIRED_FIELDS`: Empty list to make email the only required field
+  - `objects`: Custom user manager for querying users by email
+  - `created_at`: Date and time when the user was created
+  - `updated_at`: Date and time when the user was last updated
+
+### 2. Blog Model
+
+Represents individual blog posts created by users.
+
+- Fields:
+  - `id`: Primary key
+  - `user`: Foreign key to the `User` model, indicating the owner of the blog
+  - `image`: Image associated with the blog post
+  - `title`: Title of the blog post
+  - `content`: Main content of the blog post
+  - `upvotes`: Number of upvotes for the blog post
+  - `downvotes`: Number of downvotes for the blog post
+  - `created_at`: Date and time when the blog post was created
+  - `updated_at`: Date and time when the blog post was last updated
+
+### 3. Comment Model
+
+Represents comments made by users on blog posts.
+
+- Fields:
+  - `id`: Primary key
+  - `user`: Foreign key to the `User` model, indicating the user who made the comment
+  - `blog`: Foreign key to the `Blog` model, indicating the blog post being commented on
+  - `content`: Main content of the comment
+  - `created_at`: Date and time when the comment was created
+  - `updated_at`: Date and time when the comment was last updated
+
+## Relationships
+
+### User to Blog Relationship
+
+- **Type:** One-to-Many
+- **Description:** Each user can create multiple blog posts, but each blog post is associated with only one user.
+- **Implementation:**
+  - The `user` field in the `Blog` model is a foreign key that references the `User` model.
+
+### User to Comment Relationship
+
+- **Type:** One-to-Many
+- **Description:** Each user can create multiple comments, but each comment is associated with only one user.
+- **Implementation:**
+  - The `user` field in the `Comment` model is a foreign key that references the `User` model.
+
+### Blog to Comment Relationship
+
+- **Type:** One-to-Many
+- **Description:** Each blog post can have multiple comments, but each comment is associated with only one blog post.
+- **Implementation:**
+  - The `blog` field in the `Comment` model is a foreign key that references the `Blog` model.
+
+## Database Schema
+
+Below is a simplified representation of the database schema:
+
+```plaintext
+User
+| id | email           | forgot_email_token | created_at           | updated_at           |
+|----|-----------------|--------------------|----------------------|----------------------|
+| 1  | john@example.com| some_token         | 2023-01-01T12:00:00Z | 2023-01-01T12:00:00Z |
+
+Blog
+| id | user_id | image                | title       | content                | upvotes | downvotes | created_at           | updated_at           |
+|----|---------|----------------------|-------------|------------------------|---------|-----------|----------------------|----------------------|
+| 1  | 1       | blog_images/1.jpg    | First Post  | This is the first post | 10      | 2         | 2023-01-02T10:30:00Z | 2023-01-02T10:30:00Z |
+| 2  | 1       | blog_images/2.jpg    | Second Post | Another interesting... | 5       | 0         | 2023-01-03T08:45:00Z | 2023-01-03T08:45:00Z |
+
+Comment
+| id | user_id | blog_id | content                   | created_at           | updated_at           |
+|----|---------|---------|---------------------------|----------------------|----------------------|
+| 1  | 1       | 1       | Great post!               | 2023-01-02T11:00:00Z | 2023-01-02T11:00:00Z |
+| 2  | 1       | 1       | I agree with your points! | 2023-01-02T11:15:00Z | 2023-01-02T11:15:00Z |
+
+
+
 ## Continuous Integration and Testing
 
 - The project follows best practices for continuous integration and testing to ensure code quality and reliability. Key points in this process include:
 
 ### Automated Testing
 
-We have implemented a comprehensive suite of automated tests to validate the functionality of different components. These tests cover unit tests, integration tests, and end-to-end tests. To run the tests locally, use the following command:
+
+1. **Directory Structure:**
+   - Organize your tests within the `tests` directory in your Django app.
+
+### Test Classes
+
+2. **Use Django's `TestCase`:**
+   - Utilize Django's `TestCase` class for  test classes.
+
+### Descriptive Naming
+
+3. **Naming Conventions:**
+   - Choose descriptive names for your test classes and methods. Follow a naming convention such as `TestAddBlog`.
+
+### Test Fixtures
+
+4. **Fixture Setup:**
+   - Create necessary fixtures or use Django's `setUp` method to set up test data.
+
+### Use Appropriate Assertions
+
+5. **Django TestCase Assertions:**
+   - When writing tests for  Django application, utilize assertions provided by the Django `TestCase` class. Common assertions include:
+     - `assertEqual(a, b)`: Check if `a` and `b` are equal.
+     - `assertNotEqual(a, b)`: Check if `a` and `b` are not equal.
+     - `assertTrue(x)`: Check if `x` is `True`.
+     - `assertFalse(x)`: Check if `x` is `False`.
+     - `assertRaises(exception, callable, *args, **kwargs)`: Check if calling `callable(*args, **kwargs)` raises the specified exception.
+     - ... and more.
+
+   - Refer to the [Django TestCase documentation](https://docs.djangoproject.com/en/stable/topics/testing/tools/#django.test.TestCase) for a comprehensive list of assertions available.
+
+   - Example:
+     ```python
+     from django.test import TestCase
+
+     class YourTestCase(TestCase):
+         def test_example(self):
+             value = 42
+             self.assertEqual(value, 42, "The value should be 42")
+           
+
+### Comprehensive Coverage
+
+6. **Cover Critical Paths:**
+   - Aim for comprehensive test coverage, ensuring that critical code paths are tested thoroughly.
+
+### Isolation
+
+7. **Test Isolation:**
+   - Ensure each test is isolated and does not depend on the state left behind by other tests.
+
+## Running Tests
+
+To run tests for the blog institute Django application, execute the following command:
 
 ```bash
-
-Python3 manage.py test
-
-```
-
+python manage.py test accounts
+python manage.py test blog
 
 
 - __VALIDATOR TESTING__
@@ -279,8 +470,48 @@ Python3 manage.py test
 
 ## DEPLOYMENT
 
-- This site will be deployed on Heroku. Detailed deployment instructions will be provided soon.
+This section provides step-by-step instructions on how to deploy the Blogs Institute Django application on Heroku. 
 
+### Prerequisites
+
+Before you begin, make sure you have the following:
+
+- A [Heroku account](https://signup.heroku.com/) .
+- [Git](https://git-scm.com/) installed on your local machine.
+- The [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed.
+
+### Deployment Steps
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/caleb1711/blog-institue.git
+   cd blogs-institute
+
+   heroku create blog
+
+   heroku config:set SECRET_KEY='your_secret_key'
+   heroku config:set DEBUG=False
+   heroku config:set ALLOWED_HOSTS=*
+   heroku config:set EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+   heroku config:set EMAIL_HOST=smtp.gmail.com
+   heroku config:set EMAIL_PORT=port
+   heroku config:set EMAIL_USE_TLS=True
+   heroku config:set EMAIL_USE_SSL=False 
+   heroku config:set EMAIL_HOST_USER=hostemsail  
+   heroku config:set EMAIL_HOST_PASSWORD=password
+   heroku config:set DEFAULT_FROM_EMAIL=Blog Institute <email>
+
+   git push heroku main
+
+   heroku run python manage.py migrate
+
+   heroku run python manage.py createsuperuser
+
+   heroku open
+
+- Make sure to set the ALLOWED_HOSTS environment variable on Heroku to the domain name of your app.
+- I also enable the the automatic deployments with main branch.
 
 ## Acknowledgments
 
