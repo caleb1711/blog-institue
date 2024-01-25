@@ -457,7 +457,7 @@ To run tests for the blog institute Django application, execute the following co
 ```bash
 python manage.py test accounts
 python manage.py test blog
-
+```
 
 - __VALIDATOR TESTING__
    - VALIDATOR TESTING with wc3 of all the front end .
