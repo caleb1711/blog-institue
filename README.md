@@ -389,7 +389,7 @@ Comment
 |----|---------|---------|---------------------------|----------------------|----------------------|
 | 1  | 1       | 1       | Great post!               | 2023-01-02T11:00:00Z | 2023-01-02T11:00:00Z |
 | 2  | 1       | 1       | I agree with your points! | 2023-01-02T11:15:00Z | 2023-01-02T11:15:00Z |
-
+```
 
 
 ## Continuous Integration and Testing
@@ -533,5 +533,4 @@ These contributions have played a crucial role in shaping Blogs Institute, and w
 
 ## Contact
 
-If you have any questions or need support, you can reach me at Calkra15@outlook.com
-.
+If you have any questions or need support, you can reach me at Calkra15@outlook.com.
