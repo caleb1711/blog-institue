@@ -167,8 +167,8 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
 
    ![11](https://github.com/caleb1711/blog-institue/assets/130179631/e8f441c7-20e6-4334-975a-68c1a8f3f2f1)
 
-   - Mobile View
-   - Home page mobile view
+ - __Mobile View__
+ - __Home page mobile view__
 
    ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-2024-02-04-05_19_12](https://github.com/caleb1711/blog-institue/assets/130179631/a4a1cfed-d40e-4f23-a1e4-ebd3de5f1363)
 
