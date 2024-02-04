@@ -538,8 +538,22 @@ python manage.py test blog
 
 - __VALIDATOR TESTING__
    - VALIDATOR TESTING with wc3 of all the front end .
-   - Python testing done is manually
-   - Django testing done manually
+
+   - HTML VALIDATOR TESTING:
+     Important Note HTML VALIDATOR TESTING 
+     This project uses Django templating tags in the HTML templates. When using HTML validators or static analysis tools, you may encounter errors related to these templating tags. These tags are essential for dynamic content rendering in Django and are not syntax errors.
+
+      For example, in the HTML templates, you will see tags like {% load static %}, {% url 'home' %}, and others. These are Django template tags and should not be considered as HTML syntax errors.
+
+   If you encounter issues or errors related to these templating tags while using HTML validators or other tools, please disregard them as they are expected behavior in a Django project.
+ 
+   - CSS VALIDATOR TESTING :
+    ![Screenshot from 2024-02-04 06-27-20](https://github.com/caleb1711/blog-institue/assets/130179631/d0fa5bbe-fc11-44e9-ab50-4d9cdc18f173)
+
+
+    
+   - Python testing done by writing test cases in our project.
+   - Django testing done  by writing test cases in our project.
    - All the features of our Project is Done
     ![20](https://github.com/caleb1711/blog-institue/assets/130179631/809e85c1-8680-4e6f-b556-a491eda53e06)
 
