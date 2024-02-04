@@ -40,8 +40,8 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
   - User can leave a comment on blog in blog details page so comment will be saved in database. 
 
 
-![1](https://github.com/caleb1711/blog-institue/assets/130179631/4ba8171d-2886-4b93-9c23-892850f169dd)
-![2](https://github.com/caleb1711/blog-institue/assets/130179631/5a01b7d1-1a5c-4176-a8d5-071eae601b30)
+![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-2024-02-04-04_54_27](https://github.com/caleb1711/blog-institue/assets/130179631/1a0bf2c6-59db-4c64-ab7c-6722100a2b91)
+
 
 
 
@@ -51,7 +51,8 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
   - User will enter first name , last name,  email, phone_number and password for registration.
   - user can not use same email for other account creation.
  
-    ![3](https://github.com/caleb1711/blog-institue/assets/130179631/283c3cef-035a-4a1f-b754-2d868547029c)
+    ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-accounts-signup-2024-02-04-04_56_19](https://github.com/caleb1711/blog-institue/assets/130179631/72740f21-a559-48c2-a8b7-d918a6dc131f)
+
 
 
     
@@ -59,7 +60,7 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
    - After registration user will be able to login to the system .
    - User will be able to acces all the features in our site .
  
-     ![4](https://github.com/caleb1711/blog-institue/assets/130179631/28e7ce4d-7391-4830-8b3b-8f5f8a9485c5)
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-accounts-login-2024-02-04-04_56_55](https://github.com/caleb1711/blog-institue/assets/130179631/cb45b9c7-aa94-43fd-870a-4e53b6fdb433)
 
 
 
@@ -69,7 +70,8 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
    - User enter his email and system generate a link for reset password and send a email to user .
    - System will send the email to user
  
-     ![5](https://github.com/caleb1711/blog-institue/assets/130179631/3dc65236-26c0-49bc-827b-c21895d4de88)
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-accounts-forgot-2024-02-04-04_57_44](https://github.com/caleb1711/blog-institue/assets/130179631/3bc80c75-ed02-4168-9305-a643ab64e2bb)
+
 
 
 
@@ -77,7 +79,8 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
    - User click on reset link and he will go to the reset password page.
    - User can easily change his password and easily recover the passowrd.
  
-     ![6](https://github.com/caleb1711/blog-institue/assets/130179631/a0debbd0-b24f-4264-8c4b-0ca4e8a9acb8)
+     ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-accounts-reset-6e556103-aced-4f68-a3b7-4a0a7242dc7a-2024-02-04-04_58_42](https://github.com/caleb1711/blog-institue/assets/130179631/1b409099-c619-457d-9559-e7510a02d805)
+
 
 
 
@@ -87,7 +90,8 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
    - user can see all of his blogs.
    - User can edit a blog and also delete the blog.
  
-     ![7](https://github.com/caleb1711/blog-institue/assets/130179631/d3dd2699-f990-4139-a3e6-b852dcf927d2)
+     ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-myblogs-2024-02-04-04_59_56](https://github.com/caleb1711/blog-institue/assets/130179631/35e78c59-ef33-4e7d-9ad6-3a21ee0ca0af)
+
 
 
 
@@ -95,7 +99,7 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
    - User can edit his blog easily user will click on edit button and he will go to the edit page .
    - edit page will show prefilled data about blog.
  
-     ![8](https://github.com/caleb1711/blog-institue/assets/130179631/23dd4a2c-de50-4b04-b65d-afb52291e2e3)
+     ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-editblog-19-2024-02-04-05_00_31](https://github.com/caleb1711/blog-institue/assets/130179631/f4fbc983-8127-48a7-88f1-e8faff52488d)
 
 
 
@@ -103,7 +107,7 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
 - __Add Blog Page__
    - User can add the blog  easily .
  
-     ![9](https://github.com/caleb1711/blog-institue/assets/130179631/cad14b0c-275e-49d6-8cca-c23fbe53f193)
+     ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-addblog-2024-02-04-05_01_05](https://github.com/caleb1711/blog-institue/assets/130179631/93ff24df-fa76-4200-a6fb-f070199274f3)
 
 
      
@@ -124,8 +128,15 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
    - Navigation Menu: The navigation menu is organized for easy access to different sections of the platform. It includes links to the homepage, user profile, blog management, and the login/logout option. For mobile users, the menu is collapsible for a smooth browsing experience.
    - User Account: Once you've signed in, your profile picture or avatar is displayed in the header, along with options for account settings and log out.
 
+
+      ![Screenshot from 2024-02-04 05-02-09](https://github.com/caleb1711/blog-institue/assets/130179631/5d10c23e-f907-40fa-a3e7-04b5345db6be)
+
+
 - __FOOTER__
    - Copyright Information: We respect intellectual property rights. The footer contains copyright information to protect user-generated content and ensure proper attribution.
+ 
+     ![image](https://github.com/caleb1711/blog-institue/assets/130179631/7b5537f5-f626-4a83-8d9b-7d188d84845c)
+
 
  - __ScreenShots__
 
