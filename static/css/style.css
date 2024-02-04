@@ -73,8 +73,6 @@ body::-webkit-scrollbar-thumb {
   font-family: Roboto;
   line-height: 35.52px;
   text-align: center;
-  font-size: 500;
-  text-align: center;
   color: #fff;
   margin-top: 3rem;
 }
@@ -198,9 +196,9 @@ body::-webkit-scrollbar-thumb {
   color: #303133;
   font-weight: 500;
   margin-bottom: 20px;
-  letter-spacing: -0.5;
+  letter-spacing: -0.5px;
 }
-.blog_card_content p {
+.blog_card_content p{
   font-size: 16px;
   color: #777;
   line-height: 36px;
