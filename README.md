@@ -540,7 +540,11 @@ python manage.py test blog
    - VALIDATOR TESTING with wc3 of all the front end .
 
    - HTML VALIDATOR TESTING:
-     Important Note HTML VALIDATOR TESTING 
+     Important Note HTML VALIDATOR TESTING
+ 
+      ![Screenshot from 2024-02-04 06-34-38](https://github.com/caleb1711/blog-institue/assets/130179631/d529f605-2bbc-4d7c-b029-b4acc5b4449a)
+
+     
      This project uses Django templating tags in the HTML templates. When using HTML validators or static analysis tools, you may encounter errors related to these templating tags. These tags are essential for dynamic content rendering in Django and are not syntax errors.
 
       For example, in the HTML templates, you will see tags like {% load static %}, {% url 'home' %}, and others. These are Django template tags and should not be considered as HTML syntax errors.
