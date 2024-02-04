@@ -110,7 +110,31 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
      ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-addblog-2024-02-04-05_01_05](https://github.com/caleb1711/blog-institue/assets/130179631/93ff24df-fa76-4200-a6fb-f070199274f3)
 
 
-     
+- __About Us Page__
+   - About us
+     ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-about-2024-02-04-05_34_26](https://github.com/caleb1711/blog-institue/assets/130179631/ee81e343-a04c-4c34-bd07-278032e4837e)
+
+
+- __Contact Us Page__
+   - Contact us
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-contact-2024-02-04-05_36_51](https://github.com/caleb1711/blog-institue/assets/130179631/03250948-d533-4c26-8c6d-719cdfd746e6)
+
+
+- __Privacy policy Page__
+   - Privacy policy
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-privacy-2024-02-04-05_37_19](https://github.com/caleb1711/blog-institue/assets/130179631/2bd8b920-964f-459e-b1bc-db74e0b0376e)
+
+ 
+- __Term's & conditions Page__
+   - Term's & conditions
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-terms-2024-02-04-05_37_58](https://github.com/caleb1711/blog-institue/assets/130179631/d6fb92a4-7024-455f-9a28-3c6cdb98a7dc)
+
+
+- __Disclaimer Page__
+   - Disclaimer
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-disclaimer-2024-02-04-05_38_43](https://github.com/caleb1711/blog-institue/assets/130179631/1f2de293-f92e-4ce0-92b6-d322cc3eb7f7)
+
+  
 - __Admin Side__
    - Admin User will be able to do anything on site. 
    - Admin user can create the other admin users.
@@ -144,28 +168,60 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
    ![11](https://github.com/caleb1711/blog-institue/assets/130179631/e8f441c7-20e6-4334-975a-68c1a8f3f2f1)
 
    - Mobile View
-   ![12](https://github.com/caleb1711/blog-institue/assets/130179631/2f38b058-0d26-4a10-b1d4-fc95cf9d1371)
+   - Home page mobile view
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-2024-02-04-05_19_12](https://github.com/caleb1711/blog-institue/assets/130179631/a4a1cfed-d40e-4f23-a1e4-ebd3de5f1363)
 
 
-   ![13](https://github.com/caleb1711/blog-institue/assets/130179631/bb63c72f-84bf-4ddb-9aec-9660747b2a9a)
+   - Login page mobile view
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-accounts-login-2024-02-04-05_21_38](https://github.com/caleb1711/blog-institue/assets/130179631/7e1ffc10-96a3-4124-9977-c1af1c95282a)
 
 
-   ![14](https://github.com/caleb1711/blog-institue/assets/130179631/eec45402-2ed0-465f-8437-89d23216d5c1)
+   - Sign-up mobile view
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-accounts-signup-2024-02-04-05_22_21](https://github.com/caleb1711/blog-institue/assets/130179631/1326cc0e-5204-4fa0-add3-603d636d7672)
 
 
-   ![15](https://github.com/caleb1711/blog-institue/assets/130179631/09dd7859-8242-4133-a343-9201ea3389af)
+   - Forgot Password page mobile view
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-accounts-forgot-2024-02-04-05_23_20](https://github.com/caleb1711/blog-institue/assets/130179631/a4d6e1dc-cee6-4eef-b67f-44c2117d7952)
 
 
-   ![16](https://github.com/caleb1711/blog-institue/assets/130179631/ff3111b6-f775-4859-a259-50cf2e03c00b)
+   - Reset Password page mobile view
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-accounts-reset-6e556103-aced-4f68-a3b7-4a0a7242dc7a-2024-02-04-05_24_22](https://github.com/caleb1711/blog-institue/assets/130179631/dc972f19-3792-4a48-a5aa-b1aa2def1765)
 
 
-   ![17](https://github.com/caleb1711/blog-institue/assets/130179631/19376861-8d18-4e93-8ba5-79e3cd33910d)
+   - My Blogs page mobile view
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-myblogs-2024-02-04-05_25_35](https://github.com/caleb1711/blog-institue/assets/130179631/eb414171-c312-493b-96a8-048f3cc24602)
 
 
-   ![18](https://github.com/caleb1711/blog-institue/assets/130179631/00a104e9-c6a8-4e6c-854e-7add189c951d)
+   - Add Blog page mobile view
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-addblog-2024-02-04-05_27_49](https://github.com/caleb1711/blog-institue/assets/130179631/8dc56eae-a310-40c3-ac9f-5dbae138abee)
+   
+
+   - Edit Blog page mobile view
+   ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-editblog-15-2024-02-04-05_27_13](https://github.com/caleb1711/blog-institue/assets/130179631/98bba520-dce8-4583-9881-9859057dca00)
 
 
-   ![19](https://github.com/caleb1711/blog-institue/assets/130179631/8caac612-6909-4b05-8645-34289fc87e35)
+   - About Us page mobile view
+
+     ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-about-2024-02-04-05_30_28](https://github.com/caleb1711/blog-institue/assets/130179631/b7617fe1-fa2a-4e15-bc29-f1c25992ed19)
+
+
+   - Contact Us page mobile view
+
+     ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-contact-2024-02-04-05_30_59](https://github.com/caleb1711/blog-institue/assets/130179631/a4f6cd77-eab1-44b7-8ede-92f614431e19)
+
+
+   - Privacy Policy
+  
+      ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-privacy-2024-02-04-05_31_24](https://github.com/caleb1711/blog-institue/assets/130179631/ffd88c9f-542a-40f6-99fb-ccb596e9af6e)
+
+   - Term's & Conditions
+
+     ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-terms-2024-02-04-05_32_06](https://github.com/caleb1711/blog-institue/assets/130179631/b6644c5c-8f3e-410c-b02d-58a52cea9591)
+
+
+   - Disclaimer
+
+     ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-disclaimer-2024-02-04-05_32_46](https://github.com/caleb1711/blog-institue/assets/130179631/da8bbcb0-338b-46d8-8f88-bbeb51bbdf37)
 
 
 ## Features
