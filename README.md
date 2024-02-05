@@ -66,7 +66,7 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
 
 
 - __Forgot Password__
-   - User if user forgot his password so he will be able to reset the password.
+   - If user forgot his password, he will be able to reset the password.
    - User enter his email and system generate a link for reset password and send a email to user .
    - System will send the email to user
  
@@ -77,7 +77,7 @@ Blogs Institute offers a unique platform for bloggers, providing a user-friendly
 
 - __Reset Password__
    - User click on reset link and he will go to the reset password page.
-   - User can easily change his password and easily recover the passowrd.
+   - User can easily change his password and easily recover the password.
  
      ![screencapture-blog-institutes-a9fd3e1b31a5-herokuapp-accounts-reset-6e556103-aced-4f68-a3b7-4a0a7242dc7a-2024-02-04-04_58_42](https://github.com/caleb1711/blog-institue/assets/130179631/1b409099-c619-457d-9559-e7510a02d805)
 
