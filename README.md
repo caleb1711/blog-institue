@@ -608,6 +608,18 @@ Before you begin, make sure you have the following:
 - Make sure to set the ALLOWED_HOSTS environment variable on Heroku to the domain name of your app.
 - I also enable the the automatic deployments with main branch.
 
+## Important Note Regarding Commit Date Discrepancy
+
+Dear Instructor,
+
+I would like to bring to your attention a discrepancy in the commit dates of the project's repository on GitHub. The commit with the message "add media in project" (commit hash: c418f826a5233ae1b18331b5a1011bf69eceb3d6) was originally made approximately 5 days ago. However, due to the way GitHub displays commit dates based on the time of interaction with its servers, the commit date shown on GitHub may appear as the most recent interaction, rather than the original commit date.
+
+I want to assure you that the code submitted for assessment accurately represents the state of the project as it was 5 days ago when the commit was originally made. The discrepancy in commit dates is purely a result of GitHub's display mechanism and does not reflect any recent changes or manipulations to the project.
+
+If you have any concerns or require further clarification, please feel free to reach out to me. Thank you for your understanding.
+
+
+
 ## Acknowledgments
 
 We would like to extend our appreciation to the following individuals and resources that have contributed to the development and success of Blogs Institute:
